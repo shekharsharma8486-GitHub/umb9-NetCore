@@ -1,0 +1,142 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+    <PropertyGroup>
+        <TargetFramework>net5.0</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Umbraco.Cms" Version="9.0.0-rc002" />
+        <PackageReference Include="uSync" Version="9.0.0-rc002" />
+    </ItemGroup>
+
+
+    <ItemGroup>
+        <Content Remove="umbraco\Data\**" />
+        <Content Remove="umbraco\logs\**" />
+    </ItemGroup>
+    <ItemGroup>
+        <Compile Remove="umbraco\Data\**" />
+        <Compile Remove="umbraco\logs\**" />
+    </ItemGroup>
+    <ItemGroup>
+        <EmbeddedResource Remove="umbraco\Data\**" />
+        <EmbeddedResource Remove="umbraco\logs\**" />
+    </ItemGroup>
+    <ItemGroup>
+        <None Include="config\**\*.*">
+            <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+            <CopyToPublishDirectory>Always</CopyToPublishDirectory>
+        </None>
+        <None Include="umbraco\**\*.*">
+            <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+            <CopyToPublishDirectory>Always</CopyToPublishDirectory>
+        </None>
+        <None Include="App_Plugins\**\*.*">
+            <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+            <CopyToPublishDirectory>Always</CopyToPublishDirectory>
+        </None>
+        <None Remove="umbraco\Data\**" />
+        <None Remove="umbraco\logs\**" />
+    </ItemGroup>
+    <ItemGroup>
+      <Folder Include="App_Plugins\" />
+      <Folder Include="wwwroot\assets\" />
+      <Folder Include="umbraco\mediacache\" />
+      <Folder Include="Views\MacroPartials\" />
+      <Folder Include="wwwroot\media\" />
+    </ItemGroup>
+    <ItemGroup>
+      <None Include="wwwroot\assets\css\animate.css" />
+      <None Include="wwwroot\assets\css\bootstrap.min.css" />
+      <None Include="wwwroot\assets\css\etlinefont.css" />
+      <None Include="wwwroot\assets\css\font-awesome.css" />
+      <None Include="wwwroot\assets\css\magnific-popup.css" />
+      <None Include="wwwroot\assets\css\style.css" />
+      <None Include="wwwroot\assets\fonts\et-line.eot" />
+      <None Include="wwwroot\assets\fonts\et-line.svg" />
+      <None Include="wwwroot\assets\fonts\et-line.ttf" />
+      <None Include="wwwroot\assets\fonts\et-line.woff" />
+      <None Include="wwwroot\assets\fonts\fontawesome-webfont.eot" />
+      <None Include="wwwroot\assets\fonts\fontawesome-webfont.svg" />
+      <None Include="wwwroot\assets\fonts\fontawesome-webfont.ttf" />
+      <None Include="wwwroot\assets\fonts\fontawesome-webfont.woff" />
+      <None Include="wwwroot\assets\fonts\fontawesome-webfont.woff2" />
+      <None Include="wwwroot\assets\fonts\glyphicons-halflings-regular.eot" />
+      <None Include="wwwroot\assets\fonts\glyphicons-halflings-regular.svg" />
+      <None Include="wwwroot\assets\fonts\glyphicons-halflings-regular.ttf" />
+      <None Include="wwwroot\assets\fonts\glyphicons-halflings-regular.woff" />
+      <None Include="wwwroot\assets\fonts\glyphicons-halflings-regular.woff2" />
+      <None Include="wwwroot\assets\images\1x1-blue.png" />
+      <None Include="wwwroot\assets\images\blog\avatar1.jpg" />
+      <None Include="wwwroot\assets\images\blog\avatar2.jpg" />
+      <None Include="wwwroot\assets\images\blog\avatar3.jpg" />
+      <None Include="wwwroot\assets\images\blog\avatar4.jpg" />
+      <None Include="wwwroot\assets\images\blog\blog1.jpg" />
+      <None Include="wwwroot\assets\images\blog\blog2.jpg" />
+      <None Include="wwwroot\assets\images\blog\blog3.jpg" />
+      <None Include="wwwroot\assets\images\clients-logo\client1.png" />
+      <None Include="wwwroot\assets\images\clients-logo\client2.png" />
+      <None Include="wwwroot\assets\images\clients-logo\client3.png" />
+      <None Include="wwwroot\assets\images\clients-logo\client4.png" />
+      <None Include="wwwroot\assets\images\clients-logo\client5.png" />
+      <None Include="wwwroot\assets\images\device-desktop.png" />
+      <None Include="wwwroot\assets\images\device.png" />
+      <None Include="wwwroot\assets\images\logo.png" />
+      <None Include="wwwroot\assets\images\page-header.jpg" />
+      <None Include="wwwroot\assets\images\parallax\contact.jpg" />
+      <None Include="wwwroot\assets\images\parallax\cta.jpg" />
+      <None Include="wwwroot\assets\images\parallax\facts.jpg" />
+      <None Include="wwwroot\assets\images\parallax\skills.jpg" />
+      <None Include="wwwroot\assets\images\parallax\testimonials.jpg" />
+      <None Include="wwwroot\assets\images\parallax\timeline.jpg" />
+      <None Include="wwwroot\assets\images\pattern.png" />
+      <None Include="wwwroot\assets\images\progress.gif" />
+      <None Include="wwwroot\assets\images\services1.jpg" />
+      <None Include="wwwroot\assets\images\services2.jpg" />
+      <None Include="wwwroot\assets\images\services3.jpg" />
+      <None Include="wwwroot\assets\images\slider\1.jpg" />
+      <None Include="wwwroot\assets\images\slider\2.jpg" />
+      <None Include="wwwroot\assets\images\slider\3.jpg" />
+      <None Include="wwwroot\assets\images\team\team1.jpg" />
+      <None Include="wwwroot\assets\images\team\team2.jpg" />
+      <None Include="wwwroot\assets\images\team\team3.jpg" />
+      <None Include="wwwroot\assets\images\team\team4.jpg" />
+      <None Include="wwwroot\assets\images\testimonial\testimonial-img1.jpg" />
+      <None Include="wwwroot\assets\images\testimonial\testimonial-img2.jpg" />
+      <None Include="wwwroot\assets\images\timeline-bg.jpg" />
+      <None Include="wwwroot\assets\images\works\img1.jpg" />
+      <None Include="wwwroot\assets\images\works\img10.jpg" />
+      <None Include="wwwroot\assets\images\works\img11.jpg" />
+      <None Include="wwwroot\assets\images\works\img12.jpg" />
+      <None Include="wwwroot\assets\images\works\img2.jpg" />
+      <None Include="wwwroot\assets\images\works\img3.jpg" />
+      <None Include="wwwroot\assets\images\works\img4.jpg" />
+      <None Include="wwwroot\assets\images\works\img5.jpg" />
+      <None Include="wwwroot\assets\images\works\img6.jpg" />
+      <None Include="wwwroot\assets\images\works\img7.jpg" />
+      <None Include="wwwroot\assets\images\works\img8.jpg" />
+      <None Include="wwwroot\assets\images\works\img9.jpg" />
+      <None Include="wwwroot\assets\js\bootstrap.min.js" />
+      <None Include="wwwroot\assets\js\custom.js" />
+      <None Include="wwwroot\assets\js\easing.js" />
+      <None Include="wwwroot\assets\js\jquery-1.11.1.min.js" />
+      <None Include="wwwroot\assets\js\jquery.appear.js" />
+      <None Include="wwwroot\assets\js\jquery.easypiechart.js" />
+      <None Include="wwwroot\assets\js\jquery.flexslider-min.js" />
+      <None Include="wwwroot\assets\js\jquery.magnific-popup.min.js" />
+      <None Include="wwwroot\assets\js\jquery.mixitup.min.js" />
+      <None Include="wwwroot\assets\js\jquery.parallax-1.1.3.js" />
+      <None Include="wwwroot\assets\js\owl-carousel\AjaxLoader.gif" />
+      <None Include="wwwroot\assets\js\owl-carousel\grabbing.png" />
+      <None Include="wwwroot\assets\js\owl-carousel\owl.carousel.css" />
+      <None Include="wwwroot\assets\js\owl-carousel\owl.carousel.js" />
+      <None Include="wwwroot\assets\js\owl-carousel\owl.theme.css" />
+      <None Include="wwwroot\assets\js\owl-carousel\owl.transitions.css" />
+      <None Include="wwwroot\assets\LICENSE.txt" />
+    </ItemGroup>
+
+    <!-- Set this to true if ModelsBuilder mode is not InMemoryAuto-->
+    <PropertyGroup>
+        <RazorCompileOnBuild>false</RazorCompileOnBuild>
+        <RazorCompileOnPublish>false</RazorCompileOnPublish>
+    </PropertyGroup>
+</Project>
