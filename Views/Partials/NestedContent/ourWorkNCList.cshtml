@@ -1,0 +1,30 @@
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<OurWorkNclist>
+@using Umbraco.Cms.Core.Models;
+@using Umbraco.Cms.Web.Common.Models;
+@using Core.Helper;
+@if (Model != null)
+{
+    var ourWork = Model.Value<IEnumerable<IPublishedElement>>("ourWork");
+    @if (ourWork != null)
+    {
+
+            <!-- Work Grid -->
+            <ul class="work-grid">
+
+                @foreach (var item in ourWork)
+                {
+                    <li class="work-item thumnail-img mix @Model.Title.ToLower()">
+                        @{
+                            var partialView = HelperServices.GetPartial(item);
+                            @await Html.PartialAsync(partialView, item)
+                        }
+
+
+                    </li>
+                }
+
+            </ul>
+        
+    }
+}
+

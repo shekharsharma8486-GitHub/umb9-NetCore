@@ -1,0 +1,18 @@
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<Client>
+@using Umbraco.Cms.Core.Models;
+@using Umbraco.Cms.Web.Common.Models;
+@using Core.Helper;
+@if (Model != null)
+{
+    var link = ( Model.Value<Link>("clientURL")!=null && Model.Value<Link>("clientURL").Url!=null) ? Model.Value<Link>("clientURL").Url:"#" ;
+    <div class="item">
+        <a href=@link>
+            <figure>
+                @if (Model.Image != null)
+                {
+                    <img src=@Model.Image.MediaUrl() alt="" />
+                }
+            </figure>
+        </a>
+    </div>
+}

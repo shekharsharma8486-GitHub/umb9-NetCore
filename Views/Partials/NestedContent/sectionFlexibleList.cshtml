@@ -1,0 +1,24 @@
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<SectionFlexibleList>
+@using Umbraco.Cms.Core.Models;
+@using Umbraco.Cms.Web.Common.Models;
+@using Core.Helper;
+@if (Model != null)
+{
+     var sectionFlexible = Model.Value<IEnumerable<IPublishedElement>>("sectionFlexible");
+
+<div class="tab-pane" id="tab-content-2">
+
+    @if (sectionFlexible != null)
+    {
+        @foreach (var item in sectionFlexible)
+        {
+
+            var partialView = HelperServices.GetPartial(item);
+
+            @await Html.PartialAsync(partialView, item)
+        }
+
+    }
+    
+</div>
+}

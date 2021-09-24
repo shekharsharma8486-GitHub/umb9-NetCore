@@ -1,0 +1,24 @@
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<HistoryModuleNC>
+@using Umbraco.Cms.Core.Models;
+@using Umbraco.Cms.Web.Common.Models;
+@using Core.Helper;
+@if (Model != null)
+{
+    var historyModuleList = Model.Value<IEnumerable<IPublishedElement>>("historyModuleList");
+    
+    @if (historyModuleList != null)
+    {
+
+    @if (!string.IsNullOrEmpty(Model.Title))
+    {
+    <li class="year">@Model.Title</li>
+    }
+
+    @foreach (var item in historyModuleList)
+    {
+        var partialView = HelperServices.GetPartial(item);
+        @await Html.PartialAsync(partialView, item)
+    }
+   
+    }
+}

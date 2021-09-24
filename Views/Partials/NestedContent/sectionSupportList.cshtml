@@ -1,0 +1,27 @@
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<SectionSupportList>
+@using Umbraco.Cms.Core.Models;
+@using Umbraco.Cms.Web.Common.Models;
+@using Core.Helper;
+@if (Model != null)
+{
+    var sectionSupport = Model.Value<IEnumerable<IPublishedElement>>("sectionSupport");
+    @if (sectionSupport != null)
+    {
+        <div class="tab-pane" id="tab-content-3">
+
+            <div class="features-tab3">
+                @foreach (var item in sectionSupport)
+                {
+                    var partialView = HelperServices.GetPartial(item);
+
+                    @await Html.PartialAsync(partialView, item)
+                }
+            </div>
+        </div>
+    }
+}
+
+
+
+
+

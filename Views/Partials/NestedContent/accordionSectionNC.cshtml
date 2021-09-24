@@ -1,0 +1,106 @@
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<AccordionSectionNC>
+@using Umbraco.Cms.Core.Models;
+@using Umbraco.Cms.Web.Common.Models;
+@using Core.Helper;
+@if (Model != null)
+{
+    var accordionSection = Model.Value<IEnumerable<IPublishedElement>>("accordionSection");
+
+    @if (accordionSection != null)
+    {
+        var count = 1;
+        <div class="col-md-6">
+            <div class="panel-group accordion-main" id="accordion">
+               
+                @foreach (AccordionSection item in accordionSection)
+                {
+
+                    <div class="panel">
+                        <div class="panel-heading collapsed" data-toggle="collapse"
+                             data-parent="#accordion" data-target="#collapse-@count">
+                           @if(!string.IsNullOrEmpty(item.Title))
+                        {
+                            <h6 class="panel-title accordion-toggle">
+                                @item.Title
+                            </h6>
+                        }
+                            
+                        </div>
+                        <div id="collapse-@count" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                @if (!string.IsNullOrEmpty(item.SubTitle))
+                                {
+                                    <p>
+                                        @Html.Raw(item.SubTitle)
+                                    </p>
+                                }
+
+
+                            </div>
+                        </div>
+                    </div>
+                    @*var partialView = HelperServices.GetPartial(item);
+                     @await Html.PartialAsync(partialView, item)*@
+                    count= count + 1;
+                }
+
+            </div>
+        </div>
+    }
+
+   
+    
+
+   
+    @*<div class="panel">
+        <div class="panel-heading collapsed" data-toggle="collapse"
+             data-parent="#accordion" data-target="#collapseTwo">
+            <h6 class="panel-title accordion-toggle">
+                Web Designing
+            </h6>
+        </div>
+        <div id="collapseTwo" class="panel-collapse collapse">
+            <div class="panel-body">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin non blandit nibh. Sed eget tortor tincidunt, auctor sem eget, mollis nisi. Pellentesque ipsum erat, facilisis ut venenatis eu, sodales vel dolor fusce diam ornare.
+                </p>
+            </div>
+        </div>
+    </div>
+
+   
+    <div class="panel">
+        <div class="panel-heading collapsed" data-toggle="collapse"
+             data-parent="#accordion" data-target="#collapseThree">
+            <h6 class="panel-title accordion-toggle">
+                Web Development
+            </h6>
+        </div>
+        <div id="collapseThree" class="panel-collapse collapse">
+            <div class="panel-body">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin non blandit nibh. Sed eget tortor tincidunt, auctor sem eget, mollis nisi. Pellentesque ipsum erat, facilisis ut venenatis eu, sodales vel dolor fusce diam ornare.
+                </p>
+
+            </div>
+        </div>
+    </div>
+
+    
+    <div class="panel">
+        <div class="panel-heading collapsed" data-toggle="collapse"
+             data-parent="#accordion" data-target="#collapseFour">
+            <h6 class="panel-title accordion-toggle">
+                Responsive Design
+            </h6>
+        </div>
+        <div id="collapseFour" class="panel-collapse collapse">
+            <div class="panel-body">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin non blandit nibh. Sed eget tortor tincidunt, auctor sem eget, mollis nisi. Pellentesque ipsum erat, facilisis ut venenatis eu, sodales vel dolor fusce diam ornare.
+                </p>
+            </div>
+        </div>
+    </div>*@
+
+}

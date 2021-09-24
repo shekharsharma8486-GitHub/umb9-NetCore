@@ -1,0 +1,28 @@
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<SectionCleanDesignNC>
+@using Umbraco.Cms.Core.Models;
+@using Umbraco.Cms.Web.Common.Models;
+@if (Model != null)
+{
+    // var components = Model.Value<IEnumerable<IPublishedElement>>("components");
+
+    <div class="col-md-3">
+        <div class="tab4-services-box">
+            @if (!string.IsNullOrEmpty(Model.Icon))
+            {
+                <div class="icon"><i class="fa fa-@Model.Icon"></i> </div>
+            }
+            <div class="info">
+                @if (!string.IsNullOrEmpty(Model.Title))
+                {
+                    <h4>@Model.Title</h4>
+                }
+                @if (!string.IsNullOrEmpty(Model.SubTitle))
+                {
+                    <p>
+                        @Html.Raw(Model.SubTitle)
+                    </p>
+                }
+            </div>
+        </div>
+    </div>
+}

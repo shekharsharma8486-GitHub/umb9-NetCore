@@ -1,0 +1,96 @@
+﻿@using Core.Helper;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<FeatureModuleList>
+@using Umbraco.Cms.Core.Models;
+@using Umbraco.Cms.Web.Common.Models;
+@if (Model != null)
+{
+    var featureModule = Model.Value<IEnumerable<IPublishedElement>>("featureModule");
+
+    <section id="about" class="section">
+        <div class="container">
+            <div class="row">
+                @if (featureModule != null)
+                {
+                    @foreach (var item in featureModule)
+                    {
+                        var partialView = HelperServices.GetPartial(item);
+
+                        @await Html.PartialAsync(partialView, item)
+                    }
+                }
+          
+                <!--<div class="col-md-4">
+        <div class="features-icon-box">
+
+            <div class="features-icon">
+                <i class="fa fa-paper-plane"></i>
+            </div>
+
+            <div class="features-info">
+                <h4>Illustration</h4>
+                <p>Lorem ipsum dolor consectetur adipisicing incididunt eiusmod tempor incididunt laboredolore magna aliqua.</p>
+            </div>
+        </div>
+    </div>-->
+                <!-- Features Icon-->
+                <!--<div class="col-md-4">
+        <div class="features-icon-box">
+
+            <div class="features-icon">
+                <i class="fa fa-life-saver"></i>
+            </div>
+
+            <div class="features-info">
+                <h4>App Development</h4>
+                <p>Lorem ipsum dolor consectetur adipisicing incididunt eiusmod tempor incididunt laboredolore magna aliqua.</p>
+            </div>
+        </div>
+    </div>-->
+                <!-- Features Icon-->
+                <!--<div class="col-md-4">
+        <div class="features-icon-box">
+
+            <div class="features-icon">
+                <i class="fa fa-paint-brush"></i>
+            </div>
+
+            <div class="features-info">
+                <h4>Web Development</h4>
+                <p>Lorem ipsum dolor consectetur adipisicing incididunt eiusmod tempor incididunt laboredolore magna aliqua.</p>
+            </div>
+        </div>
+    </div>-->
+                <!-- Features Icon-->
+                <!--<div class="col-md-4">
+        <div class="features-icon-box">
+
+            <div class="features-icon">
+                <i class="fa fa-line-chart"></i>
+            </div>
+
+            <div class="features-info">
+                <h4>Digital Design</h4>
+                <p>Lorem ipsum dolor consectetur adipisicing incididunt eiusmod tempor incididunt laboredolore magna aliqua.</p>
+            </div>
+        </div>
+    </div>-->
+                <!-- Features Icon-->
+                <!--<div class="col-md-4">
+        <div class="features-icon-box">
+
+            <div class="features-icon">
+                <i class="fa fa-gift"></i>
+            </div>
+
+            <div class="features-info">
+                <h4>Fully Responsive</h4>
+                <p>Lorem ipsum dolor consectetur adipisicing incididunt eiusmod tempor incididunt laboredolore magna aliqua.</p>
+            </div>
+        </div>
+    </div>-->
+
+
+            </div> 
+        </div> 
+    </section>
+}

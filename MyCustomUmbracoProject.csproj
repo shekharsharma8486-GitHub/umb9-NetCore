@@ -39,12 +39,13 @@
     </ItemGroup>
     <ItemGroup>
       <Folder Include="App_Plugins\" />
-      <Folder Include="wwwroot\assets\" />
+      <Folder Include="Views\Partials\Nested\" />
       <Folder Include="umbraco\mediacache\" />
       <Folder Include="Views\MacroPartials\" />
       <Folder Include="wwwroot\media\" />
     </ItemGroup>
     <ItemGroup>
+      <None Include="MyCustomUmbracoProject.sln" />
       <None Include="wwwroot\assets\css\animate.css" />
       <None Include="wwwroot\assets\css\bootstrap.min.css" />
       <None Include="wwwroot\assets\css\etlinefont.css" />
@@ -65,7 +66,6 @@
       <None Include="wwwroot\assets\fonts\glyphicons-halflings-regular.ttf" />
       <None Include="wwwroot\assets\fonts\glyphicons-halflings-regular.woff" />
       <None Include="wwwroot\assets\fonts\glyphicons-halflings-regular.woff2" />
-      <None Include="wwwroot\assets\images\1x1-blue.png" />
       <None Include="wwwroot\assets\images\blog\avatar1.jpg" />
       <None Include="wwwroot\assets\images\blog\avatar2.jpg" />
       <None Include="wwwroot\assets\images\blog\avatar3.jpg" />
@@ -132,6 +132,9 @@
       <None Include="wwwroot\assets\js\owl-carousel\owl.theme.css" />
       <None Include="wwwroot\assets\js\owl-carousel\owl.transitions.css" />
       <None Include="wwwroot\assets\LICENSE.txt" />
+    </ItemGroup>
+    <ItemGroup>
+      <ProjectReference Include="..\Umbraco9Core\Core\Core.csproj" />
     </ItemGroup>
 
     <!-- Set this to true if ModelsBuilder mode is not InMemoryAuto-->

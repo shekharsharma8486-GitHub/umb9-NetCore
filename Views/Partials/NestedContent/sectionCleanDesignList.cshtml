@@ -1,0 +1,23 @@
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<SectionCleanDesignList>
+@using Umbraco.Cms.Core.Models;
+@using Umbraco.Cms.Web.Common.Models;
+@using Core.Helper;
+@if (Model != null)
+{
+    var sectionCleanDesign = Model.Value<IEnumerable<IPublishedElement>>("sectionCleanDesign");
+    @if (sectionCleanDesign != null)
+    {
+        <div class="tab-pane" id="tab-content-4">
+
+            <div class="tab-content-4">
+                @foreach (var item in sectionCleanDesign)
+                {
+
+                    var partialView = HelperServices.GetPartial(item);
+
+                    @await Html.PartialAsync(partialView, item)
+                }
+            </div>
+        </div>
+    }
+}

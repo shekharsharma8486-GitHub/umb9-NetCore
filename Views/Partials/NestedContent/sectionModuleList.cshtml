@@ -1,0 +1,59 @@
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<SectionModuleList>
+@using Umbraco.Cms.Core.Models;
+@using Umbraco.Cms.Web.Common.Models;
+@using Core.Helper;
+@if (Model != null)
+{
+    var sectionModule = Model.Value<IEnumerable<IPublishedElement>>("sectionModule");
+
+    @if (sectionModule != null)
+    {
+        var count = 1;
+        <section class="section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="content-tab-1">
+                            <ul class="nav">
+
+                                @foreach (SectionTitleAndIconHeader item in sectionModule)
+                                {
+
+                                    var activeClass = count == 1 ? "active" : string.Empty;
+                                    var icon = item.Icon != null ? item.Icon : string.Empty;
+                                    var title = item.Title != null ? item.Title : string.Empty;
+                                    <li class=@activeClass>
+                                        <a aria-expanded="true" href="#tab-content-@count" data-toggle="tab">
+                                            <i class="fa fa-@icon"></i>
+                                            <h4>@title</h4>
+                                            @*@await Html.PartialAsync(partialView, item)*@
+                                        </a>
+                                        <div class="tab-arrow"></div>
+                                    </li>
+                                    count = @count + 1;
+                                }
+                            </ul>
+                            @if (sectionModule != null)
+                            {
+                                <div class="tab-content-main">
+                                    <div class="container">
+                                        <div class="tab-content">
+                                            @foreach (var item in sectionModule)
+                                            {
+                                                var partialView = HelperServices.GetPartial(item);
+                                                @await Html.PartialAsync(partialView, item)
+                                            }
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+                           
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    }
+}
+
+

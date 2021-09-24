@@ -1,0 +1,41 @@
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<TeamSection>
+@using Umbraco.Cms.Core.Models;
+@using Umbraco.Cms.Web.Common.Models;
+@using Core.Helper;
+@if (Model != null)
+{
+    var teamList = Model.Value<IEnumerable<IPublishedElement>>("teamList");
+
+<section id="team" class="section">
+    <div class="container">
+        <div class="row">
+            @if (!string.IsNullOrEmpty(Model.Title))
+            {
+                <div class="title-box text-center">
+                    <h2 class="title">@Model.Title</h2>
+                </div>
+            }
+        </div>
+     
+        <div class="team-items team-carousel">
+            @if (teamList != null)
+            {
+                @foreach (var item in teamList)
+                {
+
+                  
+                        var partialView = HelperServices.GetPartial(item);
+                        @await Html.PartialAsync(partialView, item)
+              
+
+                }
+                
+            }
+
+
+
+
+        </div>
+    </div>
+</section>
+}

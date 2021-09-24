@@ -1,0 +1,60 @@
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<SectionResponsiveList>
+@using Umbraco.Cms.Core.Models;
+@using Umbraco.Cms.Web.Common.Models;
+@using Core.Helper;
+@if (Model != null)
+{
+    var sectionResponsive = Model.Value<IEnumerable<IPublishedElement>>("sectionResponsive");
+
+    @if (sectionResponsive != null)
+    {
+        <div class="tab-pane active in" id="tab-content-1">
+
+            <!-- Features Icon-->
+            <div class="col-md-6 margin-bottom-30">
+                <div class="tab1-features">
+                    <div class="icon"> <i class="fa fa-star-o"></i> </div>
+                    <div class="info">
+                        <h4>Dedicated Support & Updates</h4>
+                        <p>Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet. Et netus et malesuada fames ac turpis egestas tristique senectus. </p>
+                    </div>
+                </div>
+
+                <div class="tab1-features">
+                    <div class="icon"> <i class="fa fa-codepen"></i> </div>
+                    <div class="info">
+                        <h4>multipurpose theme</h4>
+                        <p>Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet. Et netus et malesuada fames ac turpis egestas tristique senectus. </p>
+                    </div>
+                </div>
+
+                <div class="tab1-features">
+                    <div class="icon"> <i class="fa fa-heart-o"></i></div>
+                    <div class="info">
+                        <h4>Design With Love</h4>
+                        <p>Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet. Et netus et malesuada fames ac turpis egestas tristique senectus. </p>
+                    </div>
+                </div>
+
+            </div>
+            <!--End features Icon-->
+            <!--  Start Carousel-->
+            @{
+                var imageList = Model.ImageList;
+                @if (imageList != null)
+                {
+                    <div class="col-md-6">
+                        <div class="tab-carousel">
+                            @foreach (var img in imageList)
+                            {
+                                <div class="item"><img src=@img.MediaUrl() alt=""></div>
+                            }
+                        </div>
+                    </div>
+                }
+            }
+        </div>
+    }
+}
+
+

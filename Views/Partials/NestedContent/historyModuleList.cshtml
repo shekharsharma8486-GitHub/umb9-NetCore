@@ -1,0 +1,30 @@
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<HistoryModuleList>
+@using Umbraco.Cms.Core.Models;
+@using Umbraco.Cms.Web.Common.Models;
+@using Core.Helper;
+@if (Model != null)
+{
+    var historyModule = Model.Value<IEnumerable<IPublishedElement>>("historyModule");
+
+    @if (historyModule != null)
+    {
+        <section id="history" class="section parallax">
+            <div class="overlay"></div>
+            <div class="container">
+                <div class="title-box text-center white">
+                    <h2 class="title">History</h2>
+                </div>
+                <ul class="timeline list-unstyled">
+                    @foreach (var item in historyModule)
+                    {
+
+                        var partialView = HelperServices.GetPartial(item);
+                        @await Html.PartialAsync(partialView, item)
+                    }
+                    <li class="clear"></li>
+                    <li class="end-icon fa fa-bookmark"></li>
+                </ul>
+            </div>
+        </section>
+    }
+}

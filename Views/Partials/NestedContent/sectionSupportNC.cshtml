@@ -1,0 +1,41 @@
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<SectionSupportNC>
+@using Umbraco.Cms.Core.Models;
+@using Umbraco.Cms.Web.Common.Models;
+@using Core.Helper;
+@if (Model != null)
+{
+    var sectionSupportSubList = Model.Value<IEnumerable<IPublishedElement>>("sectionSupportSubList");
+
+
+    @if (sectionSupportSubList != null)
+    {
+        <div class="col-md-4">
+            @foreach (var item in sectionSupportSubList.Take(3))
+            {
+
+                var partialView = HelperServices.GetPartial(item);
+
+                @await Html.PartialAsync(partialView, item)
+            }
+        </div>
+    }
+
+    @if (Model.Image != null)
+    {
+        <div class="col-md-4 hidden-xs m-bot-30">
+            <img src=@Model.Image.MediaUrl() alt="Features Image" />
+        </div>
+    }
+    @if (sectionSupportSubList != null)
+    {
+        <div class="col-md-4">
+            @foreach (var item in sectionSupportSubList.Skip(3))
+            {
+
+                var partialView = HelperServices.GetPartial(item);
+
+                @await Html.PartialAsync(partialView, item)
+            }
+        </div>
+    }
+}

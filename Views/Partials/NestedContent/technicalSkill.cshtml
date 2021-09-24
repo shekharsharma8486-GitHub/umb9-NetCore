@@ -1,0 +1,26 @@
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<TechnicalSkill>
+@using Umbraco.Cms.Core.Models;
+@using Umbraco.Cms.Web.Common.Models;
+@if (Model != null)
+{
+    // var components = Model.Value<IEnumerable<IPublishedElement>>("components");
+
+    {
+        var percentage = Model.DataPercent != 0 ? Model.DataPercent : 0;
+<div class="col-sm-3 col-md-3 col-lg-3 pie-chart-main">
+    <span class="pie-chart " data-percent=@percentage>
+        <span class="percent"></span>
+    </span>
+    @if (!string.IsNullOrEmpty(Model.Title))
+    {
+        <h4>@Model.Title</h4>
+    }
+    @if (!string.IsNullOrEmpty(Model.SubTitle))
+    {
+        <p>@Html.Raw(Model.SubTitle)</p>
+    }
+
+</div>
+    }
+
+}

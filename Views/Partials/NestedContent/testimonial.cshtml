@@ -1,0 +1,22 @@
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<Testimonial>
+@using Umbraco.Cms.Core.Models;
+@using Umbraco.Cms.Web.Common.Models;
+@using Core.Helper;
+@if (Model != null)
+{
+    //var accordionSection = Model.Value<IEnumerable<IPublishedElement>>("accordionSection");
+
+<div class="items">
+
+
+    <div class="desc">@Html.Raw(Model.Description).ToString().Trim().Substring(3).Substring(0,Model.Description.ToString().Trim().Length-7)</div>
+    @if (Model.Image != null)
+    {
+        <img src=@Model.Image.MediaUrl() class="testimonial-pic" alt="testimonials" />
+    }
+    @if (Model.Testiname != null)
+    {
+        <div class="name">@Model.Testiname</div>
+    }
+</div>
+}

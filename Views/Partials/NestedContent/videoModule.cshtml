@@ -1,0 +1,47 @@
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<VideoModule>
+@using Umbraco.Cms.Core.Models;
+@using Umbraco.Cms.Web.Common.Models;
+@using Core.Helper;
+@if (Model != null)
+{
+    var videoList = Model.Value<IEnumerable<IPublishedElement>>("videoList");
+
+<section id="video" class="section parallax">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row">
+            @if (!string.IsNullOrEmpty(Model.Title))
+            {
+                <div class="title-box text-center white">
+                    <h2 class="title">@Model.Title</h2>
+                </div>
+            }
+            @if (videoList != null)
+            {
+                <div class="col-md-6">
+                    <div class="video-caption-main">
+
+                        @foreach (var item in videoList)
+                        {
+                            var partialView = HelperServices.GetPartial(item);
+                            @await Html.PartialAsync(partialView, item)
+                        }
+                    </div>
+                </div>
+            }
+            @if (!string.IsNullOrEmpty(Model.VideoUrl))
+            {
+                <div class="col-md-6">
+                    <div class="play-video">
+                        <iframe src=@Model.VideoUrl allowfullscreen></iframe>
+                        @*<iframe src="http://player.vimeo.com/video/115919099?title=0&amp;byline=0&amp;portrait=0&amp;color=fff" allowfullscreen></iframe>*@
+                    </div>
+                </div>
+            }
+
+
+        </div> <!-- /.row-->
+    </div> <!-- /.container-->
+</section>
+
+}

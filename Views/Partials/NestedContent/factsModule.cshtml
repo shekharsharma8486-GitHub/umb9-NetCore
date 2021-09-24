@@ -1,0 +1,22 @@
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<FactsModule>
+@using Umbraco.Cms.Core.Models;
+@using Umbraco.Cms.Web.Common.Models;
+@if (Model != null)
+{
+    // var components = Model.Value<IEnumerable<IPublishedElement>>("components");
+
+<div class="col-md-3 col-sm-6 facts-box margin-bottom-30">
+    @if (!string.IsNullOrEmpty(Model.Icon))
+    {
+        <span><i class="icon-@Model.Icon"></i></span>
+    }
+    @if (!string.IsNullOrEmpty(Model.Title))
+    {
+        <h3>@Model.Title</h3>
+    }
+    @if (!string.IsNullOrEmpty(Model.SubTitle))
+    {
+        <span>@Model.SubTitle</span>
+    }
+</div>
+}

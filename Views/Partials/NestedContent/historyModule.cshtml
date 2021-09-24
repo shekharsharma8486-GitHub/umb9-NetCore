@@ -1,0 +1,23 @@
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<HistoryModule>
+@using Umbraco.Cms.Core.Models;
+@using Umbraco.Cms.Web.Common.Models;
+@if (Model != null)
+{
+    // var components = Model.Value<IEnumerable<IPublishedElement>>("components");
+
+<li class="timeline-item">
+    @if (string.IsNullOrEmpty(Model.Title))
+    {
+        <h4>@Model.Title</h4>
+    }
+    @if (!string.IsNullOrEmpty(Model.SubTitle))
+    {
+        <p>@Html.Raw(Model.SubTitle)</p>
+    }
+    @if (!string.IsNullOrEmpty(Model.Year))
+    {
+        <span> @Model.Year</span>
+    }
+
+</li>
+}

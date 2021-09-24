@@ -1,0 +1,34 @@
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<HomeSlider>
+@using Umbraco.Cms.Core.Models;
+@using Umbraco.Cms.Web.Common.Models;
+@if (Model != null)
+{
+    <div class="slider-text-wrapper">
+        <div class="container">
+            @if (!string.IsNullOrWhiteSpace(Model.Title))
+            {
+                <div class="big">@Model.Title </div>
+            }
+            @if (!string.IsNullOrWhiteSpace(Model.SubTitle))
+            {
+                <div class="small">@Model.SubTitle</div>
+            }
+            @{
+                var link = Model.Value<Link>("link");
+                if (link != null)
+                {
+                    <a href="@link.Url" class="middle btn btn-white">@link.Name</a>
+                    @*<li><a href="@link.Url" target="@link.Target">@link.Name</a></li>*@
+                }
+            }
+
+        </div>
+    </div>
+    {
+
+        @if (Model.Image.MediaUrl() != null)
+        {
+            <img src="@Model.Image.MediaUrl()" />
+        }
+    }
+}

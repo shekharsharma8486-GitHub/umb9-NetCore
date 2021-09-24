@@ -1,0 +1,35 @@
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<Team>
+@using Umbraco.Cms.Core.Models;
+@using Umbraco.Cms.Web.Common.Models;
+@if (Model != null)
+{
+    // var components = Model.Value<IEnumerable<IPublishedElement>>("components");
+
+<div class="item">
+    @if (Model.Image != null)
+    {
+        <img src=@Model.Image.MediaUrl() alt="" />
+    }
+
+    @if (!string.IsNullOrEmpty(Model.Title))
+    {
+        <h4>@Model.Title</h4>
+    }
+    @if (!string.IsNullOrEmpty(Model.SubTitle))
+    {
+        <h5>@Html.Raw(@Model.SubTitle)</h5>
+    }
+    @if (!string.IsNullOrEmpty(Model.Description))
+    {
+        <p>@Html.Raw(Model.Description) </p>
+    }
+    <div class="socials">
+        <ul>
+            <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+            <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+            <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
+            <li><a class="google-plus" href="#"><i class="fa fa-google-plus"></i></a></li>
+        </ul>
+    </div>
+</div>
+}

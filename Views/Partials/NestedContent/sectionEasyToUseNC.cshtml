@@ -1,0 +1,22 @@
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<SectionEasyToUseNC>
+@using Umbraco.Cms.Core.Models;
+@using Umbraco.Cms.Web.Common.Models;
+@if (Model != null)
+{
+    // var components = Model.Value<IEnumerable<IPublishedElement>>("components");
+    <div class="col-md-6">
+        <div class="core-features">
+           @Html.Raw(Model.Description)
+
+        </div>
+    </div>
+    @if (Model.Image != null)
+    {
+        <div class="col-md-6">
+            <div class="devices-image">
+                <img src=@Model.Image.MediaUrl() alt="" />
+            </div>
+        </div>
+
+    }
+}

@@ -1,0 +1,98 @@
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<TabbingSectionNC>
+@using Umbraco.Cms.Core.Models;
+@using Umbraco.Cms.Web.Common.Models;
+@using Core.Helper;
+@if (Model != null)
+{
+    var count = 1;
+    var subcount = 1;
+    var components = Model.Value<IEnumerable<IPublishedElement>>("tabbingSection");
+
+    @if (components != null)
+    {
+        <div class="col-md-6">
+            <div class="tabs tabs-main">
+                <ul class="nav nav-tabs">
+                    @foreach (TabbingSection item in components)
+                    {
+                        var status = count == 1 ? "active" : string.Empty;
+                        {
+
+                            <li class=@status><a href="#@getstring(@count)" data-toggle="tab">@item.Title</a></li>
+                            @*<li><a href="#two" data-toggle="tab">Company</a></li>
+                    <li><a href="#three" data-toggle="tab">Support</a></li>*@
+                        }
+                        count = count + 1;
+
+                    }
+                </ul>
+                <div class="tab-content">
+                    @foreach (TabbingSection item in components)
+                    {
+                        var status = subcount == 1 ? "active" : string.Empty;
+
+                        <div class="tab-pane in @status" id=@getstring(@subcount)>
+                            @if (!string.IsNullOrEmpty(item.SubTitle))
+                            {
+                                <p>
+                                    @Html.Raw(item.SubTitle)
+                                </p>
+                            }
+
+                        </div>
+
+
+                        subcount = subcount + 1;
+                    }
+                </div>
+            </div>
+        </div>
+    }
+
+}
+
+@functions
+
+{
+    string getstring(int count)
+    {
+        string msg = string.Empty;
+        if(count==1)
+        {
+            msg = "one";
+        }
+        if (count == 2)
+        {
+            msg = "two";
+        }
+        if (count == 3)
+        {
+            msg = "three";
+        }
+
+        return msg;
+    }
+
+}
+
+
+
+<!--<div class="col-md-6">
+    <div class="tabs tabs-main">
+        <ul class="nav nav-tabs">
+            <li class="active"><a href="#one" data-toggle="tab">Design</a></li>
+            <li><a href="#two" data-toggle="tab">Company</a></li>
+            <li><a href="#three" data-toggle="tab">Support</a></li>
+        </ul>
+        <div class="tab-content">-->
+<!--Start Tab Item #1 -->
+<!--<div class="tab-pane in active" id="one">
+                <p>
+                    Lorem ipsum dolor consectetur adipisicing incididunt eiusmod tempor incididunt laboredolore magna aliqua. Lorem ipsum dolor consectetur adipisicing incididunt eiusmod tempor incididunt laboredolore magna aliqua. Lorem ipsum dolor consectetur adipisicing incididunt eiusmod tempor incididunt laboredolore magna aliqua. Lorem ipsum dolor consectetur adipisicing incididunt eiusmod tempor incididunt laboredolore magna aliqua.
+                </p>
+            </div>
+
+
+        </div>
+    </div>
+</div>-->

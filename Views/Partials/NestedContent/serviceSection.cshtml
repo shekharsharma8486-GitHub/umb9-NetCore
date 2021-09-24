@@ -1,0 +1,34 @@
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<ServiceSection>
+@using Umbraco.Cms.Core.Models;
+@using Umbraco.Cms.Web.Common.Models;
+@using Core.Helper;
+@if (Model != null)
+{
+    var serviceList = Model.Value<IEnumerable<IPublishedElement>>("serviceList");
+    <section id="services" class="section">
+        <div class="container">
+            <div class="row">
+
+                <div class="title-box text-center">
+                    <h2 class="title">Services</h2>
+                </div>
+                @if (serviceList != null)
+                {
+                    @foreach (var item in serviceList)
+                    {
+
+                        var partialView = HelperServices.GetPartial(item);
+                        @await Html.PartialAsync(partialView, item)
+
+                    }
+                }
+
+
+            </div>
+        </div>
+    </section>
+
+
+}
+
+

@@ -1,0 +1,36 @@
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<TestimonialModule>
+@using Umbraco.Cms.Core.Models;
+@using Umbraco.Cms.Web.Common.Models;
+@using Core.Helper;
+@if (Model != null)
+{
+    var testimonialList = Model.Value<IEnumerable<IPublishedElement>>("testimonialList");
+
+    <section id="testimonials" class="section parallax">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row">
+                @if (!string.IsNullOrEmpty(Model.Title))
+                {
+                    <div class="title-box text-center white">
+                        <h2 class="title">@Model.Title</h2>
+                    </div>
+                }
+                <div class="col-md-10 col-md-offset-1">
+                    <div class="testimonials-carousel">
+                        @if (testimonialList != null)
+                        {
+                            @foreach (var item in testimonialList)
+                            {
+
+                                var partialView = HelperServices.GetPartial(item);
+                                @await Html.PartialAsync(partialView, item)
+
+                            }
+                        }                     
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+}

@@ -1,0 +1,28 @@
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<SectionFlexibleNC>
+@using Umbraco.Cms.Core.Models;
+@using Umbraco.Cms.Web.Common.Models;
+@using Core.Helper;
+@if (Model != null)
+{
+    <div class="col-md-4">
+        <div class="tab2-services-box">
+            <div class="media">
+                @if (Model.Image != null)
+                {
+                    <img src=@Model.Image.MediaUrl() alt="services" />
+                }
+            </div>
+            <div class="services-info">
+                @if (!string.IsNullOrEmpty(Model.Title))
+                {
+                    <h4>@Model.Title</h4>
+                }
+                @if (!string.IsNullOrEmpty(Model.SubTitle))
+                {
+                    <p>@Html.Raw(Model.SubTitle)</p>
+                }
+            </div>
+        </div>
+    </div>
+}
+

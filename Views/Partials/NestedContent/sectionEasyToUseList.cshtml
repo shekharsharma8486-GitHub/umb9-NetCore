@@ -1,0 +1,28 @@
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<SectionEasyToUseList>
+@using Umbraco.Cms.Core.Models;
+@using Umbraco.Cms.Web.Common.Models;
+@using Core.Helper;
+@if (Model != null)
+{
+    var sectionEasyToUse = Model.Value<IEnumerable<IPublishedElement>>("sectionEasyToUse");
+    <div class="tab-pane" id="tab-content-5">
+        <div class="tab-content-5">
+            @if (sectionEasyToUse != null)
+            {
+                @foreach (var item in sectionEasyToUse)
+                {
+
+                    var partialView = HelperServices.GetPartial(item);
+
+                    @await Html.PartialAsync(partialView, item)
+                }
+            }
+
+        </div>
+    </div>
+
+}
+
+
+
+

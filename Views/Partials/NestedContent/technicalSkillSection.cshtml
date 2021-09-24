@@ -1,0 +1,36 @@
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<TechnicalSkillSection>
+@using Umbraco.Cms.Core.Models;
+@using Umbraco.Cms.Web.Common.Models;
+@using Core.Helper;
+@if (Model != null)
+{
+    var technicalSkillList = Model.Value<IEnumerable<IPublishedElement>>("technicalSkillList");
+    <section id="skills" class="section parallax">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row">
+
+                <div class="title-box text-center white">
+                    <h2 class="title">Technical Skills</h2>
+                </div>
+                @if (technicalSkillList != null)
+                {
+
+                    @foreach (var item in technicalSkillList)
+                    {
+                        var partialView = HelperServices.GetPartial(item);
+                        @await Html.PartialAsync(partialView, item)
+                    }
+
+
+                }
+            </div>
+        </div>
+    </section>
+}
+
+
+
+
+
+

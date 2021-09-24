@@ -1,0 +1,26 @@
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<VideoList>
+@using Umbraco.Cms.Core.Models;
+@using Umbraco.Cms.Web.Common.Models;
+@using Core.Helper;
+@if (Model != null)
+{
+    //var accordionSection = Model.Value<IEnumerable<IPublishedElement>>("accordionSection");
+    <div class="video-caption">
+        <div class="video-icon">
+            @if(!string.IsNullOrEmpty(Model.Icon))
+            {
+            <i class="fa fa-@Model.Icon"></i>
+            }
+        </div>
+        <div class="video-caption-info">
+            @if (!string.IsNullOrEmpty(Model.Title))
+            {
+                <h4>@Model.Title</h4>
+            }
+            @if (!string.IsNullOrEmpty(Model.SubTitle))
+            {
+                <p>@Html.Raw(Model.SubTitle)</p>
+            }
+        </div>
+    </div>
+}

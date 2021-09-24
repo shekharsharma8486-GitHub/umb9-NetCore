@@ -1,0 +1,39 @@
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<ContactUsModule>
+@using Umbraco.Cms.Core.Models;
+@using Umbraco.Cms.Web.Common.Models;
+@using Core.Helper;
+@using Core.ViewModels;
+@if (Model != null)
+{
+    // var accordionSection = Model.Value<IEnumerable<IPublishedElement>>("accordionSection");
+    <section id="contact" class="section parallax">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row">
+                @if (!string.IsNullOrEmpty(Model.Title))
+                {
+                    <div class="title-box text-center white">
+                        <h2 class="title">@Model.Title</h2>
+                    </div>
+                }
+
+
+            </div>
+
+            <!--Start contact form-->
+            <div class="col-md-8 col-md-offset-2 contact-form">
+
+                <div class="contact-info text-center">           
+                    @if (!string.IsNullOrEmpty(Model.Address))
+                    {
+                        @Html.Raw(Model.Address)
+                    }
+                </div>
+                @{
+                  @await  Html.PartialAsync("~/Views/Partials/ContactForm/ContactForm.cshtml", new ContactFormViewModel());
+                }
+            </div>
+        </div>
+    </section>
+
+}

@@ -1,0 +1,30 @@
+﻿@model Core.ViewModels.ContactFormViewModel
+@using Core.ViewModels 
+@using MyCustomUmbracoProject.Controllers
+
+@using (Html.BeginUmbracoForm("Submit", "ContactForm"))
+{
+   
+    @using (Html.BeginUmbracoForm<ContactFormController>(nameof(ContactFormController.Submit)))
+    {
+        <div class="row">
+            <div class="col-md-4">
+
+                @Html.TextBoxFor(m => m.FullName, new { @class = "form-control", @placeholder="Full Name" })
+            </div>
+            <div class="col-md-4">
+                @Html.TextBoxFor(m => m.Email, new { @class = "form-control", @placeholder = "Email" } )
+            </div>
+            <div class="col-md-4">
+                @Html.TextBoxFor(m => m.Subject, new { @class = "form-control", @placeholder = "Subjact" })
+            </div>
+            <div class="col-md-12">
+                @*<textarea class="form-control" id="message" rows="7" placeholder="Your Message"></textarea>*@
+                @Html.TextAreaFor(m => m.Message, new { @class = "form-control", @rows = "7", @placeholder = "Message" })
+            </div>
+            <div class="col-md-12 text-right">
+                <button type="submit" class="btn btn-green">SEND MESSAGE</button>
+            </div>
+        </div>
+        }
+    }

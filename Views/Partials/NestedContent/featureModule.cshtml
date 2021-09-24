@@ -1,0 +1,28 @@
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<FeatureModule>
+@using Umbraco.Cms.Core.Models;
+@using Umbraco.Cms.Web.Common.Models;
+@if (Model != null)
+{
+    // var components = Model.Value<IEnumerable<IPublishedElement>>("components");
+
+    <div class="col-md-4">
+        <div class="features-icon-box">
+            <div class="features-icon">
+                @if (!string.IsNullOrEmpty(Model.Icon))
+                {
+                    <i class="fa fa-@Model.Icon.ToLower()"></i>
+                }
+            </div>
+            <div class="features-info">
+                @if (!string.IsNullOrEmpty(Model.Title))
+                {
+                    <h4>@Html.Raw(Model.Title)</h4>
+                }
+                @if (!string.IsNullOrEmpty(Model.SubTitle))
+                {
+                    <p>@Html.Raw(Model.SubTitle)</p>
+                }
+            </div>
+        </div>
+    </div>
+}

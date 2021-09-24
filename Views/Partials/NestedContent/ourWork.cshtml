@@ -1,0 +1,35 @@
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<OurWork>
+@using Umbraco.Cms.Core.Models;
+@using Umbraco.Cms.Web.Common.Models;
+@if (Model != null)
+{
+    // var components = Model.Value<IEnumerable<IPublishedElement>>("components");
+
+    <div class="work-image">
+        @if (Model.Image != null)
+        {
+            <img src=@Model.Image.MediaUrl() alt="thumbnail">
+        }
+        <div class="hover-link">
+            <a href="single-work.html">
+                <i class="fa fa-link"></i>
+            </a>
+            @if (Model.Image != null)
+            {
+                <a href=@Model.Image.MediaUrl() class="popup-image">
+                    <i class="fa fa-plus"></i>
+                </a>
+            }
+        </div>
+        <div class="work-caption">
+            @if (!string.IsNullOrEmpty(Model.HoverTitle))
+            {
+                <h4>@Model.HoverTitle</h4>
+            }
+            @if (!string.IsNullOrEmpty(Model.HoverSubTitle))
+            {
+                <p>@Html.Raw(Model.HoverSubTitle)</p>
+            }
+        </div>
+    </div>
+}

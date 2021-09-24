@@ -1,0 +1,56 @@
+﻿@using Umbraco.Cms.Web.Common.PublishedModels;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<Blogs>
+
+@*@using ContentModels = Umbraco.Web.PublishedModels;
+@inherits Umbraco.Web.Mvc.UmbracoViewPage<ContentModels.Blog>
+@using Umbraco.Web;*@
+@{
+    Layout = "Master.cshtml";
+}
+
+@* the fun starts here *@
+
+<section id="page-header" class="parallax" style="">
+    <div class="overlay"></div>
+    <div class="container">
+        <h1>Blog</h1>
+        <!--Start Breadcrumb-->
+        <div class="breadcrumb">
+            <ul>
+                @{
+                    var selection = Umbraco.AssignedContentItem;
+                    var select2 = selection.Ancestors();
+                    @if (select2.Any())
+                    {
+                        //foreach (var page in select2.OrderBy("Level"))
+                        foreach (var items in select2.Reverse())
+                        {
+                            <li>
+                                <a href=@items.Url()>@items.Name</a>
+                            </li>
+                        }
+                        <li class="current">
+                            <a href=@selection.Url()>@selection.Name</a>
+                        </li>
+                    }
+
+                }
+
+
+            </ul>
+        </div>
+        <!--End Breadcrumb-->
+    </div>
+</section>
+
+<section id="blog" class="section">
+    <div class="container">
+        <div class="row">
+            <div class="title-box text-center">
+                <h2 class="title">Latest Blog</h2>
+            </div>
+            @await Umbraco.RenderMacroAsync("GetLatestBlogposts", new { numberOfPosts = Model.HowManyPostsShouldBeShownStar, startNodeId = Model.Id })         
+        
+        </div> 
+    </div> 
+</section>
