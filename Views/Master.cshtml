@@ -1,90 +1,95 @@
 ﻿@using Umbraco.Cms.Web.Common.PublishedModels;
 @inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
-@{
-    Layout = null;
-}
+@using Core.Controllers;
+    @{
+        Layout = null;
+    }
 
-<html  class="no-js">
-<head>
-    <meta charset="utf-8">
-    <title>Lamoda Free Responsive Template | Template Stock</title>
-    <meta name="author" content="">
-    <meta name="keywords" content="">
-    <meta name="description" content="">
+    <html class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <title>Lamoda Free Responsive Template | Template Stock</title>
+        <meta name="author" content="">
+        <meta name="keywords" content="">
+        <meta name="description" content="">
 
-    <!-- Mobile Specific Metas -->
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
-
-    <!--styles -->
-
-    <link href="~/assets/css/bootstrap.min.css" rel="stylesheet">
-
-    <link href="~/assets/css/font-awesome.css" rel="stylesheet">
-    <link href="~/assets/js/owl-carousel/owl.carousel.css" rel="stylesheet">
-    <link href="~/assets/js/owl-carousel/owl.theme.css" rel="stylesheet">
-    <link href="~/assets/js/owl-carousel/owl.transitions.css" rel="stylesheet">
-    <link href="~/assets/css/magnific-popup.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="~/assets/css/animate.css" />
-    <link rel="stylesheet" href="~/assets/css/etlinefont.css">
-    <link href="~/assets/css/style.css" type="text/css" rel="stylesheet" />
+        <!-- Mobile Specific Metas -->
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 
-    <div id="pageloader">
-        <div class="loader">
-            <img src="~/assets/images/progress.gif" alt='loader' />
-        </div>
-    </div>
-    <header id="header">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-12">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-menu">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="fa fa-bars"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <!--Start Logo -->
-                    <div class="logo-nav">
-                        <a href="index.html">
-                            <img src="~/assets/images/logo.png" alt="Company logo" />
-                        </a>
-                    </div>
-                    <!--End Logo -->
-                    <div class="clear-toggle"></div>
-                    <div id="main-menu" class="collapse scroll navbar-right">
-                        <ul class="nav">
+        <!--styles -->
 
-                            <li class="active"> <a href="#home">Home</a> </li>
+        <link href="~/assets/css/bootstrap.min.css" rel="stylesheet">
 
-                            <li> <a href="#about">About</a> </li>
+        <link href="~/assets/css/font-awesome.css" rel="stylesheet">
+        <link href="~/assets/js/owl-carousel/owl.carousel.css" rel="stylesheet">
+        <link href="~/assets/js/owl-carousel/owl.theme.css" rel="stylesheet">
+        <link href="~/assets/js/owl-carousel/owl.transitions.css" rel="stylesheet">
+        <link href="~/assets/css/magnific-popup.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="~/assets/css/animate.css" />
+        <link rel="stylesheet" href="~/assets/css/etlinefont.css">
+        <link href="~/assets/css/style.css" type="text/css" rel="stylesheet" />
 
-                            <li> <a href="#history">History</a> </li>
 
-                            <li> <a href="#works">Our Work</a> </li>
-
-                            <li> <a href="#team">Team</a> </li>
-
-                            <li> <a href="#services">Services</a> </li>
-
-                            <li> <a href="#blog">Blog</a></li>
-
-                            <li> <a href="#testimonials">Testimonials</a></li>
-
-                            <li> <a href="#contact">Contact</a> </li>
-
-                        </ul>
-                    </div><!-- end main-menu -->
-                </div>
+        <div id="pageloader">
+            <div class="loader">
+                <img src="~/assets/images/progress.gif" alt='loader' />
             </div>
         </div>
-    </header>
-</head>
+        <header id="header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-menu">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="fa fa-bars"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <!--Start Logo -->
+                        <div class="logo-nav">
+                            <a href="/">
+                                <img src="~/assets/images/logo.png" alt="Company logo" />
+                            </a>
+                        </div>
+                        <!--End Logo -->
+                        <div class="clear-toggle"></div>
+                        <div id="main-menu" class="collapse scroll navbar-right">
+                            <ul class="nav">
+
+                                <li class="active"> <a href="#home">Home</a> </li>
+
+                                <li> <a href="#about">About</a> </li>
+
+                                <li> <a href="#history">History</a> </li>
+
+                                <li> <a href="#works">Our Work</a> </li>
+
+                                <li> <a href="#team">Team</a> </li>
+
+                                <li> <a href="#services">Services</a> </li>
+
+                                <li> <a href="#blog">Blog</a></li>
+
+                                <li> <a href="#testimonials">Testimonials</a></li>
+
+                                <li> <a href="#contact">Contact</a> </li>
+
+                            </ul>
+                        </div><!-- end main-menu -->
+                    </div>
+                </div>
+            </div>
+        </header>
+    </head>
     <body data-spy="scroll" data-target="#main-menu">
 
-@RenderBody()
+        @RenderBody()
 
+        @*@await  @Html.Action("Footer", "Navigation")*@
+        @*@Url.Action("Index", "Footer")*@
+        @(await Component.InvokeAsync("Footer",Model))
+        
         <a href="#" class="scrollup"> <i class="fa fa-chevron-up"> </i> </a>
 
         <!--Plugins-->
@@ -101,7 +106,7 @@
         <script type="text/javascript" src="~/assets/js/custom.js"></script>
 
     </body>
-    
+
 </html>
 
 

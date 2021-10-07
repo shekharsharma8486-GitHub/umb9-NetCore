@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyCustomUmbracoProject", "M
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CoreProject", "CoreProject", "{6F413889-4C5F-4868-BEBD-11CA3D13702C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core", "..\Umbraco9Core\Core\Core.csproj", "{4A2E22D6-792C-4998-B8FF-4ABB22C1C70C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Core", "..\Umbraco9Core\Core\Core.csproj", "{4A2E22D6-792C-4998-B8FF-4ABB22C1C70C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

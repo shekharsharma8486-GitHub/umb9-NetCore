@@ -12,14 +12,17 @@
     <ItemGroup>
         <Content Remove="umbraco\Data\**" />
         <Content Remove="umbraco\logs\**" />
+        <Content Remove="umbraco\models\**" />
     </ItemGroup>
     <ItemGroup>
         <Compile Remove="umbraco\Data\**" />
         <Compile Remove="umbraco\logs\**" />
+        <Compile Remove="umbraco\models\**" />
     </ItemGroup>
     <ItemGroup>
         <EmbeddedResource Remove="umbraco\Data\**" />
         <EmbeddedResource Remove="umbraco\logs\**" />
+        <EmbeddedResource Remove="umbraco\models\**" />
     </ItemGroup>
     <ItemGroup>
         <None Include="config\**\*.*">
@@ -36,6 +39,7 @@
         </None>
         <None Remove="umbraco\Data\**" />
         <None Remove="umbraco\logs\**" />
+        <None Remove="umbraco\models\**" />
     </ItemGroup>
     <ItemGroup>
       <Folder Include="App_Plugins\" />
@@ -135,6 +139,11 @@
     </ItemGroup>
     <ItemGroup>
       <ProjectReference Include="..\Umbraco9Core\Core\Core.csproj" />
+    </ItemGroup>
+    <ItemGroup>
+      <Reference Include="Core">
+        <HintPath>..\Umbraco9Core\Core\bin\Debug\net5.0\Core.dll</HintPath>
+      </Reference>
     </ItemGroup>
 
     <!-- Set this to true if ModelsBuilder mode is not InMemoryAuto-->

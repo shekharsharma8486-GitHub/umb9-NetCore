@@ -98,6 +98,8 @@ Umbraco.Cms.Core.Actions.ActionUpdate, Umbraco.Core, Version=9.0.0.0, Culture=ne
 uSync.BackOffice.uSyncBackOfficeComposer, uSync.BackOffice, Version=9.0.0.0, Culture=neutral, PublicKeyToken=null
 uSync.BackOffice.Controllers.uSyncDashboardApiController, uSync.BackOffice, Version=9.0.0.0, Culture=neutral, PublicKeyToken=null
 uSync.BackOffice.Controllers.Trees.uSyncTreeController, uSync.BackOffice, Version=9.0.0.0, Culture=neutral, PublicKeyToken=null
+Core.Controllers.FooterController, Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+Core.Controllers.TestController, Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Cms.Web.Website.Controllers.UmbLoginController, Umbraco.Web.Website, Version=9.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Cms.Web.Website.Controllers.UmbLoginStatusController, Umbraco.Web.Website, Version=9.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Cms.Web.Website.Controllers.UmbProfileController, Umbraco.Web.Website, Version=9.0.0.0, Culture=neutral, PublicKeyToken=null
@@ -283,6 +285,7 @@ Umbraco.Cms.Core.PropertyEditors.ValueConverters.MultiUrlPickerValueConverter, U
 Umbraco.Cms.Core.PropertyEditors.ValueConverters.NestedContentManyValueConverter, Umbraco.Infrastructure, Version=9.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Cms.Core.PropertyEditors.ValueConverters.NestedContentSingleValueConverter, Umbraco.Infrastructure, Version=9.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Cms.Core.PropertyEditors.ValueConverters.RteMacroRenderingValueConverter, Umbraco.Infrastructure, Version=9.0.0.0, Culture=neutral, PublicKeyToken=null
+MyCustomUmbracoProject.Controllers.ContactFormController, MyCustomUmbracoProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
 
 Umbraco.Cms.Core.PropertyEditors.IPropertyValueConverter
 
@@ -399,10 +402,13 @@ Umbraco.Cms.Web.BackOffice.Controllers.UsersController, Umbraco.Web.BackOffice, 
 
 Umbraco.Cms.Web.Website.Controllers.SurfaceController
 
+Core.Controllers.FooterController, Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+Core.Controllers.TestController, Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Cms.Web.Website.Controllers.UmbLoginController, Umbraco.Web.Website, Version=9.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Cms.Web.Website.Controllers.UmbLoginStatusController, Umbraco.Web.Website, Version=9.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Cms.Web.Website.Controllers.UmbProfileController, Umbraco.Web.Website, Version=9.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Cms.Web.Website.Controllers.UmbRegisterController, Umbraco.Web.Website, Version=9.0.0.0, Culture=neutral, PublicKeyToken=null
+MyCustomUmbracoProject.Controllers.ContactFormController, MyCustomUmbracoProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
 
 Umbraco.Cms.Core.Composing.IComposer
 
@@ -600,16 +606,69 @@ uSync.BackOffice.SyncHandlers.Handlers.TemplateHandler, uSync.BackOffice, Versio
 
 Umbraco.Cms.Core.Models.PublishedContent.PublishedElementModel
 
+Umbraco.Cms.Web.Common.PublishedModels.AccordionSection, Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+Umbraco.Cms.Web.Common.PublishedModels.AccordionSectionNC, Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+Umbraco.Cms.Web.Common.PublishedModels.Blog, Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+Umbraco.Cms.Web.Common.PublishedModels.Client, Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+Umbraco.Cms.Web.Common.PublishedModels.ClientModule, Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+Umbraco.Cms.Web.Common.PublishedModels.ContactUs, Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+Umbraco.Cms.Web.Common.PublishedModels.ContactUsModule, Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+Umbraco.Cms.Web.Common.PublishedModels.FactsModule, Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+Umbraco.Cms.Web.Common.PublishedModels.FactsModuleList, Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+Umbraco.Cms.Web.Common.PublishedModels.FeatureModule, Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+Umbraco.Cms.Web.Common.PublishedModels.FeatureModuleList, Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+Umbraco.Cms.Web.Common.PublishedModels.HistoryModule, Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+Umbraco.Cms.Web.Common.PublishedModels.HistoryModuleList, Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+Umbraco.Cms.Web.Common.PublishedModels.HistoryModuleNC, Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+Umbraco.Cms.Web.Common.PublishedModels.HomeSlider, Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+Umbraco.Cms.Web.Common.PublishedModels.OurWork, Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+Umbraco.Cms.Web.Common.PublishedModels.OurWorkList, Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+Umbraco.Cms.Web.Common.PublishedModels.OurWorkNclist, Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+Umbraco.Cms.Web.Common.PublishedModels.QuoteModule, Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+Umbraco.Cms.Web.Common.PublishedModels.SectionCleanDesignList, Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+Umbraco.Cms.Web.Common.PublishedModels.SectionCleanDesignNC, Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+Umbraco.Cms.Web.Common.PublishedModels.SectionEasyToUseList, Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+Umbraco.Cms.Web.Common.PublishedModels.SectionEasyToUseNC, Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+Umbraco.Cms.Web.Common.PublishedModels.SectionFlexibleList, Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+Umbraco.Cms.Web.Common.PublishedModels.SectionFlexibleNC, Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+Umbraco.Cms.Web.Common.PublishedModels.SectionModuleList, Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+Umbraco.Cms.Web.Common.PublishedModels.SectionResponsive, Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+Umbraco.Cms.Web.Common.PublishedModels.SectionResponsiveList, Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+Umbraco.Cms.Web.Common.PublishedModels.SectionSupportList, Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+Umbraco.Cms.Web.Common.PublishedModels.SectionSupportNC, Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+Umbraco.Cms.Web.Common.PublishedModels.SectionSupportSubListNC, Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+Umbraco.Cms.Web.Common.PublishedModels.SectionTitleAndIconHeader, Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+Umbraco.Cms.Web.Common.PublishedModels.Service, Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+Umbraco.Cms.Web.Common.PublishedModels.ServiceSection, Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+Umbraco.Cms.Web.Common.PublishedModels.SingleImageComposition, Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+Umbraco.Cms.Web.Common.PublishedModels.SubTitleComposition, Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+Umbraco.Cms.Web.Common.PublishedModels.TabbingAndAccordionNC, Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+Umbraco.Cms.Web.Common.PublishedModels.TabbingAndAccordionSection, Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+Umbraco.Cms.Web.Common.PublishedModels.TabbingSection, Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+Umbraco.Cms.Web.Common.PublishedModels.TabbingSectionNC, Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+Umbraco.Cms.Web.Common.PublishedModels.Team, Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+Umbraco.Cms.Web.Common.PublishedModels.TeamSection, Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+Umbraco.Cms.Web.Common.PublishedModels.TechnicalSkill, Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+Umbraco.Cms.Web.Common.PublishedModels.TechnicalSkillSection, Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+Umbraco.Cms.Web.Common.PublishedModels.Testimonial, Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+Umbraco.Cms.Web.Common.PublishedModels.TestimonialModule, Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+Umbraco.Cms.Web.Common.PublishedModels.TitleCompositions, Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+Umbraco.Cms.Web.Common.PublishedModels.VideoList, Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+Umbraco.Cms.Web.Common.PublishedModels.VideoModule, Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
 
 Umbraco.Cms.Core.Models.PublishedContent.PublishedContentModel
 
-Umbraco.Cms.Web.Common.PublishedModels.File, MyCustomUmbracoProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-Umbraco.Cms.Web.Common.PublishedModels.Folder, MyCustomUmbracoProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-Umbraco.Cms.Web.Common.PublishedModels.Home, MyCustomUmbracoProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-Umbraco.Cms.Web.Common.PublishedModels.Image, MyCustomUmbracoProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-Umbraco.Cms.Web.Common.PublishedModels.Member, MyCustomUmbracoProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-Umbraco.Cms.Web.Common.PublishedModels.UmbracoMediaArticle, MyCustomUmbracoProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-Umbraco.Cms.Web.Common.PublishedModels.UmbracoMediaAudio, MyCustomUmbracoProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-Umbraco.Cms.Web.Common.PublishedModels.UmbracoMediaVectorGraphics, MyCustomUmbracoProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-Umbraco.Cms.Web.Common.PublishedModels.UmbracoMediaVideo, MyCustomUmbracoProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+Umbraco.Cms.Web.Common.PublishedModels.BlogPost, Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+Umbraco.Cms.Web.Common.PublishedModels.Blogs, Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+Umbraco.Cms.Web.Common.PublishedModels.File, Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+Umbraco.Cms.Web.Common.PublishedModels.Folder, Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+Umbraco.Cms.Web.Common.PublishedModels.Home, Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+Umbraco.Cms.Web.Common.PublishedModels.Image, Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+Umbraco.Cms.Web.Common.PublishedModels.Master, Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+Umbraco.Cms.Web.Common.PublishedModels.Member, Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+Umbraco.Cms.Web.Common.PublishedModels.TestDoc, Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+Umbraco.Cms.Web.Common.PublishedModels.UmbracoMediaArticle, Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+Umbraco.Cms.Web.Common.PublishedModels.UmbracoMediaAudio, Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+Umbraco.Cms.Web.Common.PublishedModels.UmbracoMediaVectorGraphics, Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+Umbraco.Cms.Web.Common.PublishedModels.UmbracoMediaVideo, Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
 

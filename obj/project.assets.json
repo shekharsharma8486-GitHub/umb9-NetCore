@@ -3041,6 +3041,21 @@
         "runtime": {
           "lib/net5.0/uSync.Core.dll": {}
         }
+      },
+      "Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "Umbraco.Cms.Core": "9.0.0-rc002",
+          "Umbraco.Cms.Web.BackOffice": "9.0.0-rc002",
+          "Umbraco.Cms.Web.website": "9.0.0-rc002"
+        },
+        "compile": {
+          "bin/placeholder/Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Core.dll": {}
+        }
       }
     }
   },
@@ -12448,10 +12463,16 @@
         "usync.core.9.0.0-rc002.nupkg.sha512",
         "usync.core.nuspec"
       ]
+    },
+    "Core/1.0.0": {
+      "type": "project",
+      "path": "../Umbraco9Core/Core/Core.csproj",
+      "msbuildProject": "../Umbraco9Core/Core/Core.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net5.0": [
+      "Core >= 1.0.0",
       "Umbraco.Cms >= 9.0.0-rc002",
       "uSync >= 9.0.0-rc002"
     ]
@@ -12462,11 +12483,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Umbraco\\Umbraco9Core\\MyCustomUmbracoProject\\MyCustomUmbracoProject.csproj",
+      "projectUniqueName": "D:\\Umbraco\\Development\\MyCustomUmbracoProject.csproj",
       "projectName": "MyCustomUmbracoProject",
-      "projectPath": "D:\\Umbraco\\Umbraco9Core\\MyCustomUmbracoProject\\MyCustomUmbracoProject.csproj",
+      "projectPath": "D:\\Umbraco\\Development\\MyCustomUmbracoProject.csproj",
       "packagesPath": "C:\\Users\\shekhar.sharma\\.nuget\\packages\\",
-      "outputPath": "D:\\Umbraco\\Umbraco9Core\\MyCustomUmbracoProject\\obj\\",
+      "outputPath": "D:\\Umbraco\\Development\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\shekhar.sharma\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -12477,8 +12498,8 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "http://nuget.esko.com/nuget": {},
         "https://api.nuget.org/v3/index.json": {},
+        "https://packagesource": {},
         "https://sitecore.myget.org/F/sc-packages/api/v3/index.json": {},
         "https://sitecore.myget.org/F/sc-platform-9-1/api/v3/index.json": {},
         "https://www.myget.org/F/umbracoprereleases/api/v3/index.json": {}
@@ -12486,7 +12507,11 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "D:\\Umbraco\\Umbraco9Core\\Core\\Core.csproj": {
+              "projectPath": "D:\\Umbraco\\Umbraco9Core\\Core\\Core.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
@@ -12526,7 +12551,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.302\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
       }
     }
   }
