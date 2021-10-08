@@ -137,14 +137,6 @@
       <None Include="wwwroot\assets\js\owl-carousel\owl.transitions.css" />
       <None Include="wwwroot\assets\LICENSE.txt" />
     </ItemGroup>
-    <ItemGroup>
-      <ProjectReference Include="..\Umbraco9Core\Core\Core.csproj" />
-    </ItemGroup>
-    <ItemGroup>
-      <Reference Include="Core">
-        <HintPath>..\Umbraco9Core\Core\bin\Debug\net5.0\Core.dll</HintPath>
-      </Reference>
-    </ItemGroup>
 
     <!-- Set this to true if ModelsBuilder mode is not InMemoryAuto-->
     <PropertyGroup>
