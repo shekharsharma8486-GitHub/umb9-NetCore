@@ -16,8 +16,6 @@ namespace MyCustomUmbracoProject.Controllers
 {
     public class ContactFormController : SurfaceController
     {
-
-
         public ContactFormController(IUmbracoContextAccessor umbracoContextAccessor, IUmbracoDatabaseFactory databaseFactory, ServiceContext services, AppCaches appCaches, IProfilingLogger profilingLogger, IPublishedUrlProvider publishedUrlProvider) : base(umbracoContextAccessor, databaseFactory, services, appCaches, profilingLogger, publishedUrlProvider)
         {
 
