@@ -31,8 +31,6 @@ namespace MyCustomUmbracoProject.Controllers
 
             // Work with form data here
 
-
-
             return RedirectToCurrentUmbracoPage();
         }
     }
