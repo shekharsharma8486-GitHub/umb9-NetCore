@@ -5,6 +5,7 @@
 
     <ItemGroup>
         <PackageReference Include="Umbraco.Cms" Version="9.0.0-rc002" />
+        <PackageReference Include="Umbraco.Cms.Web.BackOffice" Version="9.0.0-rc002" />
         <PackageReference Include="uSync" Version="9.0.0-rc002" />
     </ItemGroup>
 

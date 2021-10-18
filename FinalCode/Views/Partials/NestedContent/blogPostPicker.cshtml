@@ -1,0 +1,45 @@
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<BlogPostPicker>
+@using Umbraco.Cms.Core.Models;
+@using Umbraco.Cms.Web.Common.Models;
+@using Core.Helper;
+@if (Model != null)
+{
+    // var accordionSection = Model.Value<IEnumerable<IPublishedElement>>("accordionSection");
+    var blogPicker = Model.SelectBlogPost;
+    <section id="blog" class="section">
+        <div class="container">
+            <div class="row">
+                <div class="title-box text-center">
+                    <h2 class="title">Latest Blog</h2>
+                </div>
+                @if (blogPicker != null && blogPicker.Any())
+                {
+                    @foreach (BlogPost blogItem in blogPicker)
+                    {
+                        <div class="col-md-4">
+                            <div class="blog-post">
+                                <div class="post-media">
+                                    <img src="~/assets/images/blog/blog1.jpg" alt="">
+                                </div>
+                                <div class="post-desc">
+                                    @if (!string.IsNullOrEmpty(blogItem.PageTitle))
+                                    {
+                                        <h4>@Html.Raw(blogItem.PageTitle)</h4>
+                                    }
+                                    <h5>12 May, 2015 / 5 Comments</h5>
+                                    @if (!string.IsNullOrEmpty(blogItem.BlogPostDetail))
+                                    {
+                                        <p>@Html.Raw(blogItem.BlogPostDetail)</p>
+                                    }
+                                    <a href=@blogItem.Url() class="btn btn-gray-border">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                    }
+
+                }
+            </div>
+        </div>
+    </section>
+
+}

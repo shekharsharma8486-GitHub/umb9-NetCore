@@ -1,0 +1,18 @@
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+@using Umbraco.Cms.Core.Models;
+@using Umbraco.Cms.Web.Common.Models;
+
+@using (Html.BeginUmbracoForm("Index", "Search"))
+{
+    @*<form action=@Model.Url()>*@
+
+   
+        var q = Context.Request.Query["q"].ToString();
+   
+    <input type="search" name="q" placeholder="Search">
+    <button type="submit" class="btn btn-green">GO</button>
+    <h1>@q</h1>
+    @*</form>*@
+
+}
+

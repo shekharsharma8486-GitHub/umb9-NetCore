@@ -21,12 +21,7 @@
           "net5.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {},
-          "https://packagesource": {},
-          "https://sitecore.myget.org/F/sc-packages/api/v3/index.json": {},
-          "https://sitecore.myget.org/F/sc-platform-9-1/api/v3/index.json": {},
-          "https://www.myget.org/F/umbracoprereleases/api/v3/index.json": {}
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net5.0": {
@@ -45,6 +40,10 @@
           "targetAlias": "net5.0",
           "dependencies": {
             "Umbraco.Cms": {
+              "target": "Package",
+              "version": "[9.0.0-rc002, )"
+            },
+            "Umbraco.Cms.Web.BackOffice": {
               "target": "Package",
               "version": "[9.0.0-rc002, )"
             },

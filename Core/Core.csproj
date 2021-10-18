@@ -5,6 +5,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="ViewModels\BlogTags.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Umbraco.Cms.Core" Version="9.0.0-rc002" />
     <PackageReference Include="Umbraco.Cms.Web.BackOffice" Version="9.0.0-rc002" />
     <PackageReference Include="Umbraco.Cms.Web.website" Version="9.0.0-rc002" />

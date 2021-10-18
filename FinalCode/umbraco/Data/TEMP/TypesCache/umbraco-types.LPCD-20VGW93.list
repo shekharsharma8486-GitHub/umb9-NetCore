@@ -98,7 +98,9 @@ Umbraco.Cms.Core.Actions.ActionUpdate, Umbraco.Core, Version=9.0.0.0, Culture=ne
 uSync.BackOffice.uSyncBackOfficeComposer, uSync.BackOffice, Version=9.0.0.0, Culture=neutral, PublicKeyToken=null
 uSync.BackOffice.Controllers.uSyncDashboardApiController, uSync.BackOffice, Version=9.0.0.0, Culture=neutral, PublicKeyToken=null
 uSync.BackOffice.Controllers.Trees.uSyncTreeController, uSync.BackOffice, Version=9.0.0.0, Culture=neutral, PublicKeyToken=null
+Core.CustomSearchBlog.IndexHelperComposers, Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
 Core.Controllers.FooterController, Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+Core.Controllers.SearchController, Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
 Core.Controllers.TestController, Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Cms.Web.Website.Controllers.UmbLoginController, Umbraco.Web.Website, Version=9.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Cms.Web.Website.Controllers.UmbLoginStatusController, Umbraco.Web.Website, Version=9.0.0.0, Culture=neutral, PublicKeyToken=null
@@ -403,6 +405,7 @@ Umbraco.Cms.Web.BackOffice.Controllers.UsersController, Umbraco.Web.BackOffice, 
 Umbraco.Cms.Web.Website.Controllers.SurfaceController
 
 Core.Controllers.FooterController, Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+Core.Controllers.SearchController, Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
 Core.Controllers.TestController, Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Cms.Web.Website.Controllers.UmbLoginController, Umbraco.Web.Website, Version=9.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Cms.Web.Website.Controllers.UmbLoginStatusController, Umbraco.Web.Website, Version=9.0.0.0, Culture=neutral, PublicKeyToken=null
@@ -413,6 +416,7 @@ MyCustomUmbracoProject.Controllers.ContactFormController, MyCustomUmbracoProject
 Umbraco.Cms.Core.Composing.IComposer
 
 uSync.BackOffice.uSyncBackOfficeComposer, uSync.BackOffice, Version=9.0.0.0, Culture=neutral, PublicKeyToken=null
+Core.CustomSearchBlog.IndexHelperComposers, Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
 
 uSync.Core.Serialization.ISyncSerializerBase
 
@@ -609,6 +613,7 @@ Umbraco.Cms.Core.Models.PublishedContent.PublishedElementModel
 Umbraco.Cms.Web.Common.PublishedModels.AccordionSection, Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Cms.Web.Common.PublishedModels.AccordionSectionNC, Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Cms.Web.Common.PublishedModels.Blog, Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+Umbraco.Cms.Web.Common.PublishedModels.BlogPostPicker, Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Cms.Web.Common.PublishedModels.Client, Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Cms.Web.Common.PublishedModels.ClientModule, Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Cms.Web.Common.PublishedModels.ContactUs, Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
@@ -666,6 +671,7 @@ Umbraco.Cms.Web.Common.PublishedModels.Home, Core, Version=1.0.0.0, Culture=neut
 Umbraco.Cms.Web.Common.PublishedModels.Image, Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Cms.Web.Common.PublishedModels.Master, Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Cms.Web.Common.PublishedModels.Member, Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+Umbraco.Cms.Web.Common.PublishedModels.Search, Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Cms.Web.Common.PublishedModels.TestDoc, Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Cms.Web.Common.PublishedModels.UmbracoMediaArticle, Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Cms.Web.Common.PublishedModels.UmbracoMediaAudio, Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null

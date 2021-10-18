@@ -1685,8 +1685,6 @@ D:\Umbraco\Umbraco9Demo\FinalCode\bin\Debug\net5.0\uSync\v9\Templates\master.con
 D:\Umbraco\Umbraco9Demo\FinalCode\bin\Debug\net5.0\uSync\v9\usync.config
 D:\Umbraco\Umbraco9Demo\FinalCode\bin\Debug\net5.0\appsettings.Development.json
 D:\Umbraco\Umbraco9Demo\FinalCode\bin\Debug\net5.0\appsettings.json
-D:\Umbraco\Umbraco9Demo\FinalCode\bin\Debug\net5.0\App_Plugins\usync\config\appsettings-usync-schema.json
-D:\Umbraco\Umbraco9Demo\FinalCode\bin\Debug\net5.0\umbraco\config\appsettings-schema.json
 D:\Umbraco\Umbraco9Demo\FinalCode\bin\Debug\net5.0\MyCustomUmbracoProject.exe
 D:\Umbraco\Umbraco9Demo\FinalCode\bin\Debug\net5.0\MyCustomUmbracoProject.deps.json
 D:\Umbraco\Umbraco9Demo\FinalCode\bin\Debug\net5.0\MyCustomUmbracoProject.runtimeconfig.json
@@ -2110,3 +2108,11 @@ D:\Umbraco\Umbraco9Demo\FinalCode\obj\Debug\net5.0\MyCustomUmbracoProject.dll
 D:\Umbraco\Umbraco9Demo\FinalCode\obj\Debug\net5.0\ref\MyCustomUmbracoProject.dll
 D:\Umbraco\Umbraco9Demo\FinalCode\obj\Debug\net5.0\MyCustomUmbracoProject.pdb
 D:\Umbraco\Umbraco9Demo\FinalCode\obj\Debug\net5.0\MyCustomUmbracoProject.genruntimeconfig.cache
+D:\Umbraco\Umbraco9Demo\FinalCode\bin\Debug\net5.0\uSync\v9\DataTypes\BlogSortBy.config
+D:\Umbraco\Umbraco9Demo\FinalCode\bin\Debug\net5.0\uSync\v9\ContentTypes\blogpostpicker.config
+D:\Umbraco\Umbraco9Demo\FinalCode\bin\Debug\net5.0\uSync\v9\DataTypes\BlogPostPicker.config
+D:\Umbraco\Umbraco9Demo\FinalCode\bin\Debug\net5.0\uSync\v9\ContentTypes\search.config
+D:\Umbraco\Umbraco9Demo\FinalCode\bin\Debug\net5.0\uSync\v9\Content\search.config
+D:\Umbraco\Umbraco9Demo\FinalCode\bin\Debug\net5.0\uSync\v9\Templates\search.config
+D:\Umbraco\Umbraco9Demo\FinalCode\bin\Debug\net5.0\App_Plugins\usync\config\appsettings-usync-schema.json
+D:\Umbraco\Umbraco9Demo\FinalCode\bin\Debug\net5.0\umbraco\config\appsettings-schema.json

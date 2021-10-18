@@ -34,6 +34,7 @@
       "MyCustomUmbracoProject/1.0.0": {
         "dependencies": {
           "Umbraco.Cms": "9.0.0-rc002",
+          "Umbraco.Cms.Web.BackOffice": "9.0.0-rc002",
           "uSync": "9.0.0-rc002",
           "Core": "1.0.0.0",
           "Microsoft.AspNetCore.Antiforgery": "5.0.0.0",

@@ -4,7 +4,6 @@
     Layout = "Master.cshtml";
 }
 
-<!-- page-header -->
 <section id="page-header" class="parallax" style="">
     <div class="overlay"></div>
     <div class="container">
@@ -35,7 +34,6 @@
         <!--End Breadcrumb-->
     </div>
 </section>
-
 <section class="section">
     <div class="container">
         <div class="row">
@@ -69,8 +67,6 @@
                                 @Html.Raw(Model.BlogPostDetail);
                             </p>
                         }
-
-
                         <blockquote>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore, dolorum, fugiat, eligendi magni quibusdam iure cupiditate ex voluptas unde voluptatibus quos expedita autem qui vitae corrupti exercitationem facilis nihil atquea</blockquote>
 
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore, dolorum, fugiat, eligendi magni quibusdam iure cupiditate ex voluptas unde voluptatibus quos expedita autem qui vitae corrupti exercitationem facilis nihil atque!</p>
@@ -81,7 +77,6 @@
                     <!-- Comment list -->
                     <div class="comment-list">
                         <h3>5 Comments</h3>
-
                         <ol>
                             <li class="comment">
                                 <div class="single_comment first-comment">
@@ -262,36 +257,29 @@
                         </ul>
                     </div>
                 </div>
-                <!--/ post categories-->
-                <!-- Text -->
-                <div class="widget-main">
-                    <h4>Text Widget </h4>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi in molestie neque, eget posuere risus. In mauris orci, imperdiet quis hendrerit eget, dapibus sed nisi..
-                    </p>
-                </div>
-                <!-- /Text -->
-                <!-- Tags -->
+
+                @{
+                    string textWidgetParent = Model.Parent.HasValue("textWidgetMaster") ? Model.Parent.Value("textWidgetMaster").ToString() : string.Empty;
+                    string textWidget = !string.IsNullOrEmpty(Model.TextWidget) ? Model.TextWidget : textWidgetParent;
+                    @if (!string.IsNullOrEmpty(textWidget))
+                    {
+                        <div class="widget-main">
+                            <h4>Text Widget </h4>
+                            <p>
+                                @textWidget
+                            </p>
+                        </div>
+                    }
+                }
                 <div class="widget-main">
                     <h4>Tags</h4>
                     <div class="tags">
-                        <a href="">Web Design</a>
-                        <a href="">Graphic Design</a>
-                        <a href="">PHP</a>
-                        <a href="">Jquery</a>
-                        <a href="">Wordpress</a>
-                        <a href="">Animation</a>
-                        <a href="">Audio</a>
-                        <a href="">Photo Gallery</a>
+                        @(await Component.InvokeAsync("BlogTags",Model))
                     </div>
                 </div>
-                <!-- /Tags -->
             </div>
-            <!-- /right Sidebar -->
-        </div> <!-- /row -->
-        
-
-                    @Html.GetGridHtml(Model, "blogBodyContent", "bootstrap3-fluid")
-            </div>
-        </section>
-        <!-- /blog -->
+        </div>
+        @Html.GetGridHtml(Model, "blogBodyContent", "bootstrap3-fluid")
+    </div>
+</section>
+<!-- /blog -->

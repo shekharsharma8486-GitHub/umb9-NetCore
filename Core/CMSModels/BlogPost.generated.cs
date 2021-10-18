@@ -66,6 +66,13 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		public virtual global::Newtonsoft.Json.Linq.JToken BlogBodyContent => this.Value<global::Newtonsoft.Json.Linq.JToken>(_publishedValueFallback, "blogBodyContent");
 
 		///<summary>
+		/// Blog Date
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.0.0-rc002+dba385e5e52ee5a0dafd48f687e8d8254b3a633a")]
+		[ImplementPropertyType("blogDate")]
+		public virtual global::System.DateTime BlogDate => this.Value<global::System.DateTime>(_publishedValueFallback, "blogDate");
+
+		///<summary>
 		/// Blog Post
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.0.0-rc002+dba385e5e52ee5a0dafd48f687e8d8254b3a633a")]
@@ -74,11 +81,27 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		public virtual string BlogPostDetail => this.Value<string>(_publishedValueFallback, "blogPostDetail");
 
 		///<summary>
+		/// Blog Tags
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.0.0-rc002+dba385e5e52ee5a0dafd48f687e8d8254b3a633a")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("blogTags")]
+		public virtual global::System.Collections.Generic.IEnumerable<string> BlogTags => this.Value<global::System.Collections.Generic.IEnumerable<string>>(_publishedValueFallback, "blogTags");
+
+		///<summary>
 		/// Page Title
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.0.0-rc002+dba385e5e52ee5a0dafd48f687e8d8254b3a633a")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("pageTitle")]
 		public virtual string PageTitle => this.Value<string>(_publishedValueFallback, "pageTitle");
+
+		///<summary>
+		/// Text Widget
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.0.0-rc002+dba385e5e52ee5a0dafd48f687e8d8254b3a633a")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("textWidget")]
+		public virtual string TextWidget => this.Value<string>(_publishedValueFallback, "textWidget");
 	}
 }
