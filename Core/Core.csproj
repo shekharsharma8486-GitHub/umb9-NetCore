@@ -1,10 +1,11 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="RenderMVCControllerFolder\search.cs" />
     <Compile Remove="ViewModels\BlogTags.cs" />
   </ItemGroup>
 
@@ -12,6 +13,10 @@
     <PackageReference Include="Umbraco.Cms.Core" Version="9.0.0-rc002" />
     <PackageReference Include="Umbraco.Cms.Web.BackOffice" Version="9.0.0-rc002" />
     <PackageReference Include="Umbraco.Cms.Web.website" Version="9.0.0-rc002" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="RenderMVCControllerFolder\" />
   </ItemGroup>
 
 </Project>

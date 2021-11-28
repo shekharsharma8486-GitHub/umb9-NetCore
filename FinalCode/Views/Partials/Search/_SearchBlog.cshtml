@@ -1,18 +1,24 @@
-﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
-@using Umbraco.Cms.Core.Models;
-@using Umbraco.Cms.Web.Common.Models;
+﻿@model Core.Models.SearchModels;
 
-@using (Html.BeginUmbracoForm("Index", "Search"))
+
+
+@*@using (Html.BeginUmbracoForm("Index", "Search", FormMethod.Post))
 {
-    @*<form action=@Model.Url()>*@
-
-   
-        var q = Context.Request.Query["q"].ToString();
-   
-    <input type="search" name="q" placeholder="Search">
+    <form action=@Model.Url()>
+    @Html.TextBoxFor(m=>m.query, new { @class = "form-control", @placeholder = "Query..." })
     <button type="submit" class="btn btn-green">GO</button>
-    <h1>@q</h1>
-    @*</form>*@
+
+    </form>
+}*@
+@if (Model.searchDatalist != null && Model.searchDatalist.Count > 0)
+{
+    @foreach (var item in Model.searchDatalist)
+    {
+        <div class="search-result__item">
+            <h3><a href="@item.url">@item.BlogTitle</a></h3>
+
+        </div>
+    }
 
 }
 

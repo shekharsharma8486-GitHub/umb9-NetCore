@@ -1,0 +1,21 @@
+﻿@model Core.Models.SearchModels
+
+<div>
+  Search Result for: @Model.query
+</div>
+@if (Model.searchDatalist != null && Model.searchDatalist.Count > 0)
+{
+    @foreach (var item in Model.searchDatalist)
+    {
+        <div class="search-result__item">
+            
+            <h1><a href="@item.url">@item.BlogTitle</a></h1>
+
+        </div>
+    }
+
+
+}
+
+
+

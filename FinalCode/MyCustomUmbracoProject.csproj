@@ -139,9 +139,7 @@
       <None Include="wwwroot\assets\LICENSE.txt" />
     </ItemGroup>
     <ItemGroup>
-      <Reference Include="Core">
-        <HintPath>..\Core\bin\Debug\net5.0\Core.dll</HintPath>
-      </Reference>
+      <ProjectReference Include="..\Core\Core.csproj" />
     </ItemGroup>
 
     <!-- Set this to true if ModelsBuilder mode is not InMemoryAuto-->
