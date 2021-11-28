@@ -1,32 +1,32 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Umbraco\\Umbraco9Demo\\Core\\Core.csproj": {}
+    "D:\\UmbracoPOC\\Umbraco9Rc002\\Core\\Core.csproj": {}
   },
   "projects": {
-    "D:\\Umbraco\\Umbraco9Demo\\Core\\Core.csproj": {
+    "D:\\UmbracoPOC\\Umbraco9Rc002\\Core\\Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Umbraco\\Umbraco9Demo\\Core\\Core.csproj",
+        "projectUniqueName": "D:\\UmbracoPOC\\Umbraco9Rc002\\Core\\Core.csproj",
         "projectName": "Core",
-        "projectPath": "D:\\Umbraco\\Umbraco9Demo\\Core\\Core.csproj",
+        "projectPath": "D:\\UmbracoPOC\\Umbraco9Rc002\\Core\\Core.csproj",
         "packagesPath": "C:\\Users\\shekhar.sharma\\.nuget\\packages\\",
-        "outputPath": "D:\\Umbraco\\Umbraco9Demo\\Core\\obj\\",
+        "outputPath": "D:\\UmbracoPOC\\Umbraco9Rc002\\Core\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+        ],
         "configFilePaths": [
           "C:\\Users\\shekhar.sharma\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {},
-          "https://packagesource": {},
-          "https://sitecore.myget.org/F/sc-packages/api/v3/index.json": {},
-          "https://sitecore.myget.org/F/sc-platform-9-1/api/v3/index.json": {},
-          "https://www.myget.org/F/umbracoprereleases/api/v3/index.json": {}
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net5.0": {
@@ -72,7 +72,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "P+PSiYRs/t3m8t74kux65nHssbq9+wdlPw73Bh2ntmx3aL7L0lH7GnrKWhRH1yGU9cS8I4icH2drCkZ48b9ggQ==",
+  "dgSpecHash": "atHUvr33A9dYLR+DQJMPyLUHmv9kGy11/+M2f+tBMN9Gk54yB5XazaZcdfAu8lL2NszXpMi5XUUzUfUlK9XYjg==",
   "success": true,
-  "projectFilePath": "D:\\Umbraco\\Umbraco9Demo\\FinalCode\\MyCustomUmbracoProject.csproj",
+  "projectFilePath": "D:\\UmbracoPOC\\Umbraco9Rc002\\FinalCode\\MyCustomUmbracoProject.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\shekhar.sharma\\.nuget\\packages\\csharptest.net.collections-netstd2\\14.906.1403.1084\\csharptest.net.collections-netstd2.14.906.1403.1084.nupkg.sha512",
     "C:\\Users\\shekhar.sharma\\.nuget\\packages\\dazinator.extensions.fileproviders\\2.0.0\\dazinator.extensions.fileproviders.2.0.0.nupkg.sha512",
