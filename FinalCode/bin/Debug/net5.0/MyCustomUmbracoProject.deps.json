@@ -33,10 +33,10 @@
     ".NETCoreApp,Version=v5.0": {
       "MyCustomUmbracoProject/1.0.0": {
         "dependencies": {
+          "Core": "1.0.0",
           "Umbraco.Cms": "9.0.0-rc002",
           "Umbraco.Cms.Web.BackOffice": "9.0.0-rc002",
           "uSync": "9.0.0-rc002",
-          "Core": "1.0.0.0",
           "Microsoft.AspNetCore.Antiforgery": "5.0.0.0",
           "Microsoft.AspNetCore.Authentication.Abstractions": "5.0.0.0",
           "Microsoft.AspNetCore.Authentication.Cookies": "5.0.0.0",
@@ -2641,12 +2641,14 @@
           "lib/net5.0/uSync.Core.dll": {}
         }
       },
-      "Core/1.0.0.0": {
+      "Core/1.0.0": {
+        "dependencies": {
+          "Umbraco.Cms.Core": "9.0.0-rc002",
+          "Umbraco.Cms.Web.BackOffice": "9.0.0-rc002",
+          "Umbraco.Cms.Web.Website": "9.0.0-rc002"
+        },
         "runtime": {
-          "Core.dll": {
-            "assemblyVersion": "1.0.0.0",
-            "fileVersion": "1.0.0.0"
-          }
+          "Core.dll": {}
         },
         "compile": {
           "Core.dll": {}
@@ -5760,8 +5762,8 @@
       "path": "usync.core/9.0.0-rc002",
       "hashPath": "usync.core.9.0.0-rc002.nupkg.sha512"
     },
-    "Core/1.0.0.0": {
-      "type": "reference",
+    "Core/1.0.0": {
+      "type": "project",
       "serviceable": false,
       "sha512": ""
     },
