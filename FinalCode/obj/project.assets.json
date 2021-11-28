@@ -3041,6 +3041,21 @@
         "runtime": {
           "lib/net5.0/uSync.Core.dll": {}
         }
+      },
+      "Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "Umbraco.Cms.Core": "9.0.0-rc002",
+          "Umbraco.Cms.Web.BackOffice": "9.0.0-rc002",
+          "Umbraco.Cms.Web.website": "9.0.0-rc002"
+        },
+        "compile": {
+          "bin/placeholder/Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Core.dll": {}
+        }
       }
     }
   },
@@ -12448,11 +12463,18 @@
         "usync.core.9.0.0-rc002.nupkg.sha512",
         "usync.core.nuspec"
       ]
+    },
+    "Core/1.0.0": {
+      "type": "project",
+      "path": "../Core/Core.csproj",
+      "msbuildProject": "../Core/Core.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net5.0": [
+      "Core >= 1.0.0",
       "Umbraco.Cms >= 9.0.0-rc002",
+      "Umbraco.Cms.Web.BackOffice >= 9.0.0-rc002",
       "uSync >= 9.0.0-rc002"
     ]
   },
@@ -12487,7 +12509,11 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "D:\\UmbracoPOC\\Umbraco9Rc002\\Core\\Core.csproj": {
+              "projectPath": "D:\\UmbracoPOC\\Umbraco9Rc002\\Core\\Core.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
@@ -12501,6 +12527,10 @@
         "targetAlias": "net5.0",
         "dependencies": {
           "Umbraco.Cms": {
+            "target": "Package",
+            "version": "[9.0.0-rc002, )"
+          },
+          "Umbraco.Cms.Web.BackOffice": {
             "target": "Package",
             "version": "[9.0.0-rc002, )"
           },

@@ -1,0 +1,18 @@
+﻿@model Core.Models.SearchModels
+@using Core.Models
+@{
+
+    SearchModels searchModel = new SearchModels();
+    //searchModel.query = "SS";
+    searchModel.query = Context.Request.Query["query"];
+}
+<form action="/Search">
+    @Html.TextBoxFor(m => m.query, new { @class = "form-control", @placeholder = "Query..." })
+    <button type="submit" class="btn btn-green">GO View Model</button>
+
+</form>
+@if (!string.IsNullOrEmpty(searchModel.query))
+{
+    @(await Component.InvokeAsync("GetBlog", searchModel))
+}
+

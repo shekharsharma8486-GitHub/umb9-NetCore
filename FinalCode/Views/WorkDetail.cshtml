@@ -1,0 +1,130 @@
+﻿@using Umbraco.Cms.Web.Common.PublishedModels;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<WorkDetail>
+@{
+    Layout = "Master.cshtml";
+}
+<section id="page-header" class="parallax" style="">
+    <div class="overlay"></div>
+    <div class="container">
+        <h1>Work Detail</h1>
+        <div class="breadcrumb">
+            <ul>
+                @{
+                    var selection = Umbraco.AssignedContentItem;
+                    var select2 = selection.Ancestors();
+                    @if (select2.Any())
+                    {
+                        //foreach (var page in select2.OrderBy("Level"))
+                        foreach (var items in select2.Reverse())
+                        {
+                            <li>
+                                <a href=@items.Url()>@items.Name</a>
+                            </li>
+                        }
+                        <li class="current">
+                            <a href=@selection.Url()>@selection.Name</a>
+                        </li>
+                    }
+                }
+            </ul>
+        </div>
+    </div>
+</section>
+
+
+<!--Start single-work -->
+<section id="single-work" class="section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-7">
+                <div id="single-work-slider" class="owl-carousel owl-theme">
+                    @if (Model.CarouselImages != null && Model.CarouselImages.Any())
+                    {
+                        foreach (var img in Model.CarouselImages)
+                        {
+                            <div class="item"><img src=@img.Url() alt=""></div>
+                        }
+
+                        @*<div class="item"><img src="images/works/img5.jpg" alt=""></div>
+                            <div class="item"><img src="images/works/img6.jpg" alt=""></div>*@
+                    }
+
+                </div>
+            </div>
+
+            <!--Start Work Detail-->
+            <div class="col-md-5 work-detail">
+                <h3 class="margin-bottom-15">Work Description </h3>
+                @if (!string.IsNullOrEmpty(Model.WorkDetailSection))
+                {
+                    <p>@Html.Raw(Model.WorkDetailSection)</p>
+                }
+                <ul class="work-detail-list">
+                    @{
+                        var typedMultiNodeTreePicker = Model.Category;
+                        foreach (var item in typedMultiNodeTreePicker)
+                        {
+                            <li><span>Category :</span>@item.Name</li>
+                        }
+                    }
+                    @if (Model.Client != null)
+                    {
+                        <li><span>Client :</span>@Model.Client</li>
+                    }
+                    @if (Model.TechnologyUsed != null)
+                    {
+                        <li><span>Technoligies used :</span>@Model.TechnologyUsed</li>
+                    }
+
+                    @{
+                        var tags = Model.Tags;
+                        @if (tags != null && tags.Any())
+                        {
+                            var last = Model.Tags.Last();
+                            string dilimeter = tags.Count() > 1 ? "," : string.Empty;
+                           
+                            <li>
+                                <span>Tags :</span>
+                                @foreach (var item in tags)
+                                {
+                                    if (item.Equals(last))
+                                    {
+                                        @item.Name.ToString().Trim()
+                                    }
+                                    else
+                                    {
+                                        @item.Name.ToString().Trim() @dilimeter 
+                                    }
+                                }
+                            </li>
+                        }
+                    }
+                    @*@if (Model.Value<DateTime>("") != DateTime.MinValue)*@
+                    @if (Model.ReleasedDate != DateTime.MinValue)
+                    {
+                        <li><span>Date released :</span>@Model.ReleasedDate.ToString("MMMM dd, yyyy")</li>
+                    }
+
+                </ul>
+
+                <a href="#" class="btn btn-gray-border">Visit website</a>
+
+            </div>
+          
+        </div>
+    </div> 
+</section>
+
+<section id="featured-works" class="section parallax">
+    <div class="container">
+        <div class="row">
+            <h3 class="margin-bottom-50">Related Projects</h3>
+        </div>
+    </div>
+
+    <div class="related-project-carousel owl-carousel">
+        @await Html.PartialAsync("~/Views/Partials/Nested/RelatedProject.cshtml", Model)
+
+    </div>
+</section>
+<!-- End related works -->

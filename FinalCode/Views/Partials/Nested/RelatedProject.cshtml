@@ -1,0 +1,33 @@
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<WorkDetail>
+@using Umbraco.Cms.Core.Models;
+@using Umbraco.Cms.Web.Common.Models;
+@using Core.Helper;
+@if (Model != null)
+{
+    <div class="item">
+        <div class="fworks-image">
+            @if (Model.Image != null)
+            {
+                <img src=@Model.Image.Url() alt="" />
+            }
+            <div class="hover-link">
+                <a href="#">
+                    <i class="fa fa-link"></i>
+                </a>
+                @if (Model.Image != null)
+                {
+                    <a href=@Model.Image.Url() class="popup-image">
+                        <i class="fa fa-plus"></i>
+                    </a>
+                }
+            </div>
+            <div class="featured-caption">
+                @if (!string.IsNullOrEmpty(Model.Title))
+                {
+                    <h4>@Model.Title</h4>
+                }
+                <p>Design, Photography</p>
+            </div>
+        </div>
+    </div>
+}

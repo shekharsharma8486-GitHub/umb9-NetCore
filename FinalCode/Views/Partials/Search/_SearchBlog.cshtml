@@ -1,0 +1,24 @@
+﻿@model Core.Models.SearchModels;
+
+
+
+@*@using (Html.BeginUmbracoForm("Index", "Search", FormMethod.Post))
+{
+    <form action=@Model.Url()>
+    @Html.TextBoxFor(m=>m.query, new { @class = "form-control", @placeholder = "Query..." })
+    <button type="submit" class="btn btn-green">GO</button>
+
+    </form>
+}*@
+@if (Model.searchDatalist != null && Model.searchDatalist.Count > 0)
+{
+    @foreach (var item in Model.searchDatalist)
+    {
+        <div class="search-result__item">
+            <h3><a href="@item.url">@item.BlogTitle</a></h3>
+
+        </div>
+    }
+
+}
+

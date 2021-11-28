@@ -25,7 +25,7 @@ namespace Core.Controllers
         [HttpGet]
 
 
-
+   
         public IActionResult Index()
         {
            
