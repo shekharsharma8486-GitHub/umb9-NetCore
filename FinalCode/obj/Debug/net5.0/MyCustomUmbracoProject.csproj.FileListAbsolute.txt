@@ -2893,3 +2893,4 @@ D:\UmbracoPOC\Umbraco9Rc002\FinalCode\bin\Debug\net5.0\uSync\v9\Media\works_d5nh
 D:\UmbracoPOC\Umbraco9Rc002\FinalCode\bin\Debug\net5.0\uSync\v9\Templates\contact.config
 D:\UmbracoPOC\Umbraco9Rc002\FinalCode\bin\Debug\net5.0\uSync\v9\Templates\work.config
 D:\UmbracoPOC\Umbraco9Rc002\FinalCode\bin\Debug\net5.0\uSync\v9\Templates\workdetail.config
+D:\UmbracoPOC\Umbraco9Rc002\FinalCode\obj\Debug\net5.0\MyCustomUmbracoProject.csproj.CopyComplete
